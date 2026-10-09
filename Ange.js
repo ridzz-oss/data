@@ -608,6 +608,7 @@ bot.on("callback_query", async (query) => {
 ┃<b>⋅𖤓⋅ 𝙏𝙪𝙖𝙣 𝙈𝙪𝙙𝙖 𝘼𝙖𝙧𝙤𝙣 [ Developer ]</b>
 ┃<b>⋅𖤓⋅╰➤ @Fuckyatim </b>
 ┃<b>⋅𖤓⋅╰➤ @Iyaetim </b>
+@ridzzhalutrs
 ┗━━━━━━━━━━━━━━⪼
 ┏━━⪼ [ SUPPORT ]
 ┃<b>⋅𖤓⋅ @Ftmncloud12 ( Friend )</b>
@@ -3367,7 +3368,7 @@ const DEFAULT_RAW_URL =
   `https://raw.githubusercontent.com/${Owner}/${Repo}/${BranchPath}`;
 
 // ============== KONFIGURASI ==============
-const BOT_FILE = path.join(__dirname, "index.js");
+const BOT_FILE = path.join(__dirname, "Ange.js");
 const BACKUP_DIR = path.join(__dirname, "backups");
 const MAX_FILE_SIZE = 2 * 1024 * 1024;
 const CONFIRM_EXPIRES_MS = 10 * 60 * 1000;
