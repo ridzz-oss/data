@@ -3360,7 +3360,7 @@ bot.onText(/^\/suit$/, async (msg) => {
 
 // ============== KONSTANTA REPO ==============
 const Owner = "ridzz-oss";
-const Repo = "AutoUpdate";
+const Repo = "data";
 const BranchPath = "main/Ange.js";
 
 const DEFAULT_RAW_URL =
