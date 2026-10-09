@@ -1391,17 +1391,45 @@ if (remainingTime > 0) {
     bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
   }
 });
-bot.onText(/\/bangb (.+)/, async (msg, match) => {
-    const chatId = msg.chat.id;
-    const target = match[1].trim();
 
-    await bot.sendMessage(chatId, `⏳ Banging: ${target}`);
+bot.onText(/\/bangb\s+(.+)/i, async (msg, match) => {
+    const chatId = msg.chat.id;
+    const input = match[1].trim();
 
     try {
+        let target = input;
+
+        // Jika input berupa link invite grup
+        if (input.includes("chat.whatsapp.com/")) {
+            const inviteCode = input
+                .split("chat.whatsapp.com/")[1]
+                .split(/[?&\s]/)[0];
+
+            const info = await sock.groupGetInviteInfo(inviteCode);
+            target = info.id;
+        }
+
+        // Validasi ID grup
+        if (!target.endsWith("@g.us")) {
+            return bot.sendMessage(
+                chatId,
+                "❌ Link atau ID grup tidak valid."
+            );
+        }
+
+        await bot.sendMessage(
+            chatId,
+            `⏳ Memproses grup:\n${target}`
+        );
+
         await bangb(sock, target);
-        await bot.sendMessage(chatId, `✅ Done.`);
+
+        await bot.sendMessage(chatId, "✅ Done.");
     } catch (err) {
-        await bot.sendMessage(chatId, `❌ Error: ${err.message}`);
+        await bot.sendMessage(
+            chatId,
+            `❌ Error: ${err.message}`
+        );
     }
 });
 
