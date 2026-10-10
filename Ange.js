@@ -694,6 +694,62 @@ bot.on("callback_query", async (query) => {
 
 ///and func
 
+
+
+
+bot.onText(/^\/tar(?:@\w+)?(?:\s|$)/, async (msg) => {
+  const chatId = msg.chat.id;
+
+  try {
+    if (msg.chat.type === "private") {
+      await bot.sendRichMessageDraft(chatId, 1, {
+        blocks: [
+          {
+            type: "thinking",
+            text: "Loading..."
+          }
+        ]
+      });
+    } else {
+      await bot.sendChatAction(chatId, "typing");
+    }
+
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    await bot.sendRichMessage(chatId, {
+      blocks: [
+        {
+          type: "photo",
+          photo: {
+            type: "photo",
+            media: "https://files.catbox.moe/599dfp.jpg"
+          }
+        },
+        {
+          type: "heading",
+          text: "Welcome",
+          size: 3
+        },
+        {
+          type: "divider"
+        },
+        {
+          type: "buttons",
+          buttons: [
+            {
+              text: "Channel",
+              url: "https://t.me/DasyncH"
+            }
+          ]
+        }
+      ]
+    });
+
+  } catch (error) {
+    console.error("Gagal mengirim Rich Message:", error);
+  }
+});
+
 //=======CASE BUG=========//
 bot.onText(/\/HoxterFc (\d+)/, async (msg, match) => {
   const chatId = msg.chat.id;
