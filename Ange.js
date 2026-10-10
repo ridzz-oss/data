@@ -2239,7 +2239,219 @@ if (remainingTime > 0) {
   }
 });
 
+bot.onText(/\/chatpgrup(?:\s+([^\s]+))?/i, async (msg, match) => {
+  const chatId = msg.chat.id;
+  const senderId = msg.from.id;
+  const groupInput = (match[1] || "").trim();
+  const randomImage = getRandomImage();
+
+  if (!groupInput) {
+    return bot.sendMessage(
+      chatId,
+      "🪧 ☇ Format:\n/chatpgrup 120363XXXXXXXXXX@g.us\n\nAtau gunakan link undangan grup WhatsApp."
+    );
+  }
+
+  // Deteksi JID grup atau link undangan WhatsApp
+  const isGroupJid = /^[0-9-]+@g\.us$/i.test(groupInput);
+
+  const inviteMatch = groupInput.match(
+    /(?:https?:\/\/)?(?:www\.)?chat\.whatsapp\.com\/([A-Za-z0-9_-]+)/i
+  );
+
+  if (!isGroupJid && !inviteMatch) {
+    return bot.sendMessage(
+      chatId,
+      "❌ Format target tidak valid!\nGunakan JID grup atau link undangan WhatsApp."
+    );
+  }
+
+  if (!premiumUsers.some(
+    user =>
+      user.id === senderId &&
+      new Date(user.expiresAt) > new Date()
+  )) {
+    return bot.sendPhoto(chatId, randomImage, {
+      caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
+buy akses ke owner di bawa inii !!!`,
+      parse_mode: "Markdown",
+      reply_markup: {
+        inline_keyboard: [
+          [{
+            text: "Contact Owner ",
+            url: "https://t.me/Fuckyatim"
+          }]
+        ]
+      }
+    });
+  }
+
+  const remainingTime = checkCooldown(senderId);
+
+  if (remainingTime > 0) {
+    return bot.sendMessage(
+      chatId,
+      `⏳ Tunggu ${Math.ceil(remainingTime / 60)} menit sebelum bisa pakai command ini lagi.`
+    );
+  }
+
+  try {
+    if (sessions.size === 0) {
+      return bot.sendMessage(
+        chatId,
+        "❌ Tidak ada bot WhatsApp yang terhubung. Silakan hubungkan bot terlebih dahulu dengan /addsender 62xxx"
+      );
+    }
+
+    // Target default: JID yang diberikan langsung
+    let target = groupInput;
+
+    // Jika input berupa link, ubah menjadi JID menggunakan Baileys
+    if (inviteMatch) {
+      const inviteCode = inviteMatch[1];
+
+      const groupInfo = await sock.groupGetInviteInfo(inviteCode);
+
+      if (!groupInfo || !groupInfo.id) {
+        return bot.sendMessage(
+          chatId,
+          "❌ Gagal mendapatkan JID grup dari link tersebut."
+        );
+      }
+
+      target = groupInfo.id;
+
+      console.log(
+        "\x1b[36m[GROUP]\x1b[0m JID grup ditemukan:",
+        target
+      );
+    }
+
+    // Kirim gambar + caption pertama
+    const sentMessage = await bot.sendPhoto(
+      chatId,
+      "https://ibb.co.com/39TLHrck",
+      {
+        caption: `
+\`\`\`
+- HoxterFc
+╰➤ Target Grup : ${target}
+╰➤ Status : Mengirim chat P...
+╰➤ Progres : [░░░░░░░░░░] 0%
+\`\`\`
+`,
+        parse_mode: "Markdown"
+      }
+    );
+
+    // Progress bar bertahap
+    const progressStages = [
+      {
+        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█░░░░░░░░░] 10%",
+        delay: 200
+      },
+      {
+        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███░░░░░░░] 30%",
+        delay: 200
+      },
+      {
+        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████░░░░░] 50%",
+        delay: 100
+      },
+      {
+        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███████░░░] 70%",
+        delay: 100
+      },
+      {
+        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████████░] 90%",
+        delay: 100
+      }
+    ];
+
+    // Jalankan progres bertahap
+    for (const stage of progressStages) {
+      await new Promise(resolve =>
+        setTimeout(resolve, stage.delay)
+      );
+
+      await bot.editMessageCaption(
+        `
+\`\`\`
+- HoxterFc
+╰➤ Target Grup : ${target}
+╰➤ Status : Memproses...
+ ${stage.text}
+\`\`\`
+`,
+        {
+          chat_id: chatId,
+          message_id: sentMessage.message_id,
+          parse_mode: "Markdown"
+        }
+      );
+    }
+
+    // Fungsi delay async
+    const delay = ms =>
+      new Promise(res => setTimeout(res, ms));
+
+    // Eksekusi fungsi chatp sebanyak 2 kali
+    for (let i = 0; i <= 1; i++) {
+      await chatp(sock, target);
+
+      if (i < 1) {
+        await delay(1500);
+      }
+    }
+
+    console.log(
+      "\x1b[32m[SUCCESS]\x1b[0m Chat P berhasil dikirim ke grup!"
+    );
+
+    // Update ke sukses
+    await bot.editMessageCaption(
+      `
+\`\`\`
+- HoxterFc
+╰➤ Target Grup : ${target}
+╰➤ Status : Sukses!
+╰➤ Progres : [██████████] 100%
+\`\`\`
+`,
+      {
+        chat_id: chatId,
+        message_id: sentMessage.message_id,
+        parse_mode: "Markdown"
+      }
+    );
+
+  } catch (error) {
+    console.error("[CHATPGRUP ERROR]", error);
+
+    await bot.sendMessage(
+      chatId,
+      `❌ Gagal mengirim chat P: ${error.message}`
+    );
+  }
+});
 // /TEMPAT FUNC DISINI ///
+// ============== FUNCTION CHAT P ==============
+async function chatp(sock, target) {
+  if (!sock) {
+    throw new Error("Session WhatsApp tidak tersedia.");
+  }
+
+  if (!target || typeof target !== "string") {
+    throw new Error("Target WhatsApp tidak valid.");
+  }
+
+  await sock.sendMessage(target, {
+    text: "P"
+  });
+
+  return true;
+}
+
 async function JawaTimurBlankOld(sock, target) {
   await sock.relayMessage(target, {
     "videoMessage": {
