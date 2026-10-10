@@ -489,7 +489,7 @@ bot.onText(/\/start|\/p|start|menu|rey/, async (msg) => {
 Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
-𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : Althera
+𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : Althera test
 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5 BETA TEST
 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
 𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
