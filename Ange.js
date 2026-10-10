@@ -508,7 +508,7 @@ Pilih Button di bawah ini ↯
     reply_markup: {
       inline_keyboard: [
         [
-         { text: "𓆣 𝗕𝗨𝗚 𝗠𝗘𝗡𝗨", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
+         { text: "𝗕𝗨𝗚 𝗠𝗘𝗡𝗨", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
          ],
          [
          { text: "ⓘ", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
@@ -637,34 +637,40 @@ bot.on("callback_query", async (query) => {
     if (query.data === "back_to_main") {
       caption = ` 
 <blockquote><tg-emoji emoji-id="4940998718838014973">💀</tg-emoji> 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎 <tg-emoji emoji-id="4987984647443973182">🪙</tg-emoji>
-<tg-emoji emoji-id="5197429921634346862">☠️</tg-emoji> هذا البرنامج النصي خطير للغاية على المستخدمين والأهداف، لذا استخدمه بحكمة. <tg-emoji emoji-id="5348349394469022727">🚬</tg-emoji>
+<blockquote>ALTHERA - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.
 
-<tg-emoji emoji-id="5197531888452925507">🎁</tg-emoji> 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏  <tg-emoji emoji-id="5474197700087932281">🎁</tg-emoji>
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 2.0 BETA
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @Fuckyatim
-<tg-emoji emoji-id="4936468614967460670">⭐</tg-emoji> 𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
+𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : Althera test
+𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5 BETA TEST
+𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
+𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
 
-<tg-emoji emoji-id="5411419730785369685">🎁</tg-emoji> شكرًا لاستخدامك هذا البرنامج النصي. استخدمه استخدامًا حسنًا، ولا تسيء استخدامه لأن ذلك قد يؤدي إلى عقوبات وفقًا للقانون. <tg-emoji emoji-id="5465206035729906349">🐈‍⬛</tg-emoji>
+𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
+𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎: 𝙹𝚊𝚟𝚊𝚂𝚌𝚛𝚒𝚙𝚝
+𝚄𝚙𝚝𝚒𝚖𝚎: ${runtime}
+𝙿𝚛𝚎𝚏𝚒𝚡: /
+𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙 𝚂𝚎𝚜𝚜𝚒𝚘𝚗: ${statussender}
+________________________________
+Pilih Button di bawah ini ↯
 </blockquote>
 `;
       replyMarkup = {
         inline_keyboard: [
         [
-         { text: "𝗕𝗨𝗚 ⌂ 𝗠𝗢𝗗𝗘", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
+         { text: "𝗕𝗨𝗚 𝗠𝗘𝗡𝗨", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
          ],
          [
-         { text: "✦•┈", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
-          { text: "༺♱༻", callback_data: "tqto", style: "success", icon_custom_emoji_id: "4936468614967460670" },
-          { text: "┈•✦", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+         { text: "ⓘ", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+          { text: "✧", callback_data: "tqto", style: "success", icon_custom_emoji_id: "4936468614967460670" },
+          { text: "⛭", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
          ],
          [
-          { text: "𝗔𝗞𝗦𝗘𝗦 ⌂ 𝗠𝗘𝗡𝗨", callback_data: "akses", style: "primary", icon_custom_emoji_id: "5420323339723881652" },
-          { text: "𝗛𝗔𝗥𝗚𝗔 ⌂ 𝗦𝗖𝗥𝗜𝗣𝗧", callback_data: "harga", style: "primary", icon_custom_emoji_id: "5409048419211682843" },
+          { text: "𝗔𝗖𝗖𝗘𝗦 𝗠𝗘𝗡𝗨", callback_data: "akses", style: "primary", icon_custom_emoji_id: "5420323339723881652" },
+          { text: "𝗦𝗖𝗥𝗜𝗣𝗧 𝗣𝗥𝗜𝗖𝗜𝗡𝗚", callback_data: "harga", style: "primary", icon_custom_emoji_id: "5409048419211682843" },
          ],
          [
-          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" },
-          { text: "𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥", url: "https://t.me/Fuckyatim", style: "danger", icon_custom_emoji_id: "6269048584386122161" },
+          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
          ]
         ]
       };
