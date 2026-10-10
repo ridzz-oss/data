@@ -610,26 +610,15 @@ bot.on("callback_query", async (query) => {
     
     if (query.data === "tqto") {
       caption = `
-<blockquote><tg-emoji emoji-id="4940998718838014973">💀</tg-emoji> 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎 <tg-emoji emoji-id="4987984647443973182">🪙</tg-emoji>
-<tg-emoji emoji-id="5197429921634346862">☠️</tg-emoji> هذا البرنامج النصي خطير للغاية على المستخدمين والأهداف، لذا استخدمه بحكمة. <tg-emoji emoji-id="5348349394469022727">🚬</tg-emoji>
-┗━━━━━━━━━━━━━━⪼
-┏━━⪼ [ 𝗧𝗤𝗧𝗢 ⌂ 𝗠𝗘𝗡𝗨 ]
-┃<b>⋅𖤓⋅ 𝙏𝙪𝙖𝙣 𝙈𝙪𝙙𝙖 𝘼𝙖𝙧𝙤𝙣 [ Developer ]</b>
-┃<b>⋅𖤓⋅╰➤ @Fuckyatim </b>
-┃<b>⋅𖤓⋅╰➤ @Iyaetim </b>
-┗━━━━━━━━━━━━━━⪼
-┏━━⪼ [ SUPPORT ]
-┃<b>⋅𖤓⋅ @Ftmncloud12 ( Friend )</b>
-┃<b>⋅𖤓⋅ @Angkasanyabobo ( Friend }</b>
-┃<b>⋅𖤓⋅ @olucasidgaf ( Friend  )</b>
-┃<b>⋅𖤓⋅ @FaiqOffc ( Friend )</b>
-┃<b>⋅𖤓⋅ @AzkaOffcialReals (  Friend  )</b>
-┃<b>⋅𖤓⋅ @Flavourhamzx ( Friend )</b>
-┃<b>⋅𖤓⋅ @xoayanya ( Friend )</b>
-┃<b>⋅𖤓⋅ @DragonSexte ( Friend )</b>
-┃<b>⋅𖤓⋅ @zrillofficial ( Friend )</b>
-┃<b>⋅𖤓⋅ @ripzzmbut ( Young Brother )</b>
-┗━━━━━━━━━━━━━━━━━━━━━━━━⪼</blockquote>
+<blockquote><b>✦ ALTHERA — CONTRIBUTORS</b>
+<i>Appreciation for everyone behind the project.</i>
+
+┏━━〔 <b>THANKS TO</b> 〕
+┃ ✧ @ridzzhalutrs     <i>[ Developer ]</i>
+┗━━━━━━━━━━━━━━━━━━
+
+<i>Thank you for your support.</i>
+<b>ALTHERA</b> — <i>INDEPENDENT PROJECT</i></blockquote>
 `;
     replyMarkup = { inline_keyboard: [[{ text: "𝙱𝚊𝚌𝚔", callback_data: "back_to_main", style: "danger"}]] };
     }
