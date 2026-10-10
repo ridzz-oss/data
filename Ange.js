@@ -508,20 +508,19 @@ Pilih Button di bawah ini ↯
     reply_markup: {
       inline_keyboard: [
         [
-         { text: "𝗕𝗨𝗚 ⌂ 𝗠𝗢𝗗𝗘", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
+         { text: "𓆣 𝗕𝗨𝗚 𝗠𝗘𝗡𝗨", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
          ],
          [
-         { text: "✦•┈", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
-          { text: "༺♱༻", callback_data: "tqto", style: "success", icon_custom_emoji_id: "4936468614967460670" },
-          { text: "┈•✦", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+         { text: "ⓘ", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+          { text: "✧", callback_data: "tqto", style: "success", icon_custom_emoji_id: "4936468614967460670" },
+          { text: "⛭", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
          ],
          [
-          { text: "𝗔𝗞𝗦𝗘𝗦 ⌂ 𝗠𝗘𝗡𝗨", callback_data: "akses", style: "primary", icon_custom_emoji_id: "5420323339723881652" },
+          { text: "𝗔𝗖𝗖𝗘𝗦 𝗠𝗘𝗡𝗨", callback_data: "akses", style: "primary", icon_custom_emoji_id: "5420323339723881652" },
           { text: "𝗛𝗔𝗥𝗚𝗔 ⌂ 𝗦𝗖𝗥𝗜𝗣𝗧", callback_data: "harga", style: "primary", icon_custom_emoji_id: "5409048419211682843" },
          ],
          [
-          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" },
-          { text: "𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥", url: "https://t.me/Fuckyatim", style: "danger", icon_custom_emoji_id: "6269048584386122161" },
+          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
          ]
         ]
     }
