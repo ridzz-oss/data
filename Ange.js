@@ -479,8 +479,10 @@ bot.onText(/\/start|\/p|start|menu|rey/, async (msg) => {
   const premiumStatus = getPremiumStatus(senderId);
   const runtime = getBotRuntime();
   const randomImage = getRandomImage();
-  const session = userSessions.get(String(senderId));
-  const statussender = cekWaStatus(session?.sock);
+  const activeSock = [...sessions.values()].find(
+  (waSock) => waSock?.user
+);
+  const statussender = cekWaStatus(activeSock);
   const dragon = await bot.sendPhoto(chatId, randomImage, {
     caption: `
 <blockquote>ALTHERA - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
@@ -3375,7 +3377,7 @@ const DEFAULT_RAW_URL =
   `https://raw.githubusercontent.com/${Owner}/${Repo}/${BranchPath}`;
 
 // ============== KONFIGURASI ==============
-const BOT_FILE = path.join(__dirname, "index.js");
+const BOT_FILE = path.join(__dirname, "Ange.js");
 const BACKUP_DIR = path.join(__dirname, "backups");
 const MAX_FILE_SIZE = 2 * 1024 * 1024;
 const CONFIRM_EXPIRES_MS = 10 * 60 * 1000;
