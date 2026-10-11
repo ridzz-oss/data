@@ -557,7 +557,8 @@ bot.on("callback_query", async (query) => {
 <i>Daftar command dan informasi fitur yang tersedia.</i>
 
 ┏━━⪼ [ <b>BUG ⌂ MENU</b> ]
-┃ <b>𖤓 /delayhard — 628xx [ DELAY HARD ]</b>
+┃ <b>𖤓 /delayhard — 628xx</b>
+┃ <b>⤷ Perfect Delay</b>
 ┃ <b>𖤓 /test — 628xx [ FORCLOSE ]</b>
 ┃ <b>𖤓 /test — 628xx [ BAN WA ]</b>
 ┗━━━━━━━━━━━━━━━━━━⪼
@@ -630,7 +631,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 
     if (query.data === "about") {
       caption = `
-<blockquote>✦ <b>ALTHERA — ABOUT US</b>
+<blockquote>✦ 𝘼𝙇𝙏𝙃𝙀𝙍𝘼 — 𝘼𝘽𝙊𝙐𝙏 𝙐𝙎
 <b>Althera</b> is a WhatsApp bug bot project developed by a team, with the goal of delivering bugs to targets.
 
 ┏━━〔 <b>ABOUT THE PROJECT</b> 〕
@@ -647,7 +648,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 
     if (query.data === "tools") {
       caption = `
-<blockquote><b>✦ ALTHERA — TOOLS & UTILITIES</b>
+<blockquote>✦ 𝘼𝙇𝙏𝙃𝙀𝙍𝘼 — 𝙏𝙊𝙊𝙇𝙎 & 𝙐𝙏𝙄𝙇𝙄𝙏𝙄𝙀𝙎
 <i>Kumpulan fitur dan utilitas untuk kebutuhanmu.</i>
 
 ┏━━〔 <b>TOOLS MENU</b> 〕
