@@ -490,7 +490,7 @@ Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
 𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : PERFECT
 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5
-𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
+𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @Jerroffc
 𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : PRIVATE AKSES
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
@@ -519,7 +519,7 @@ Pilih Button di bawah ini ↯
           { text: "𝗦𝗖𝗥𝗜𝗣𝗧 𝗣𝗥𝗜𝗖𝗜𝗡𝗚", callback_data: "harga", style: "primary", icon_custom_emoji_id: "5409048419211682843" },
          ],
          [
-          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
+          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Jerroffc", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
          ]
         ]
     }
@@ -606,7 +606,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 ┃
 ┃ ─────────────────
 ┃ <b>⋅𖤓⋅ PEMBELIAN & AKSES</b>
-┃ Hubungi: @ridzzhalutrs
+┃ Hubungi: @ridzzhalutrs / @Jerroffc
 ┗━━━━━━━━━━━━━━━━━━⪼
 
 <b>PERFECT</b> — <i>EST. 2025</i></blockquote>
@@ -620,6 +620,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 <i>Appreciation for everyone behind the project.</i>
 
 ┏━━〔 <b>THANKS TO</b> 〕
+┃ ✧ @Jerroffc     <i>[ Developer ]</i>
 ┃ ✧ @ridzzhalutrs     <i>[ Developer ]</i>
 ┗━━━━━━━━━━━━━━━━━━
 
@@ -637,7 +638,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 ┏━━〔 <b>ABOUT THE PROJECT</b> 〕
 ┃ 𖤓 <b>Project</b> : PERFECT
 ┃ 𖤓 <b>Category</b> : WhatsApp bug bot 
-┃ 𖤓 <b>Developer</b> : @Fuckyatim and @baba
+┃ 𖤓 <b>Developer</b> : @@Jerroffc and @ridzzhalutrs
 ┗━━━━━━━━━━━━━━━━━━
 
 ✧ <i>Simple. Perfect. Continuously evolving.</i>
@@ -677,7 +678,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
 𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : PERFECT
 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5
-𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
+𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @Jerroffc
 𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : PRIVATE AKSES
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
