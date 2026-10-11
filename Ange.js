@@ -638,7 +638,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 ┏━━〔 <b>ABOUT THE PROJECT</b> 〕
 ┃ 𖤓 <b>Project</b> : PERFECT
 ┃ 𖤓 <b>Category</b> : WhatsApp bug bot 
-┃ 𖤓 <b>Developer</b> : @@Jerroffc and @ridzzhalutrs
+┃ 𖤓 <b>Developer</b> : @@Jerroffc ＆ @ridzzhalutrs
 ┗━━━━━━━━━━━━━━━━━━
 
 ✧ <i>Simple. Perfect. Continuously evolving.</i>
@@ -705,7 +705,7 @@ Pilih Button di bawah ini ↯
           { text: "𝗦𝗖𝗥𝗜𝗣𝗧 𝗣𝗥𝗜𝗖𝗜𝗡𝗚", callback_data: "harga", style: "primary", icon_custom_emoji_id: "5409048419211682843" },
          ],
          [
-          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
+          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Jerroffc", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
          ]
         ]
       };
