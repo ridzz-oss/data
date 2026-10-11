@@ -558,9 +558,11 @@ bot.on("callback_query", async (query) => {
 
 ┏━━⪼ [ <b>BUG ⌂ MENU</b> ]
 ┃ <b>𖤓 /delayhard — 628xx</b>
-┃ <b>⤷ Perfect Delay</b>
-┃ <b>𖤓 /test — 628xx [ FORCLOSE ]</b>
-┃ <b>𖤓 /test — 628xx [ BAN WA ]</b>
+┃ <i>⤷ Perfect Delay</i>
+┃ <b>𖤓 /force — 628xx</b>
+┃ <i>⤷ Forclose Click/i>
+┃ <b>𖤓 /xhard — 628xx</b>
+┃ <i>⤷ Blank Hard</i>
 ┗━━━━━━━━━━━━━━━━━━⪼
 
 <i>✧ Use responsibly. Stay informed.</i>
