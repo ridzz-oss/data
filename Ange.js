@@ -694,9 +694,9 @@ Pilih Button di bawah ini ↯
          { text: "𝗕𝗨𝗚 𝗠𝗘𝗡𝗨", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
          ],
          [
-         { text: "ⓘ", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+         { text: "ⓘ", callback_data: "about", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
           { text: "✧", callback_data: "tqto", style: "success", icon_custom_emoji_id: "4936468614967460670" },
-          { text: "⛭", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+          { text: "⛭", callback_data: "tools", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
          ],
          [
           { text: "𝗔𝗖𝗖𝗘𝗦 𝗠𝗘𝗡𝗨", callback_data: "akses", style: "primary", icon_custom_emoji_id: "5420323339723881652" },
