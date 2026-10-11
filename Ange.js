@@ -596,8 +596,8 @@ bot.on("callback_query", async (query) => {
       caption = `
 <blockquote>✦ 𝙋𝙀𝙍𝙁𝙀𝘾𝙏 — 𝙎𝘾𝙍𝙄𝙋𝙏 𝙋𝙍𝙄𝘾𝙀
 Gunakan script secara bijak dan bertanggung jawab.
+
 ┏━━⪼ [ 𝗦𝗖𝗥𝗜𝗣𝗧 ⌂ 𝗣𝗥𝗜𝗖𝗜𝗡𝗚 ]
-┃
 ┃ <b>⋅𖤓⋅ FULL UP : Rp5.000</b>
 ┃ <b>⋅𖤓⋅ RESS SC : Rp10.000</b>
 ┃ <b>⋅𖤓⋅ PARTNER SC : Rp15.000</b>
@@ -606,7 +606,6 @@ Gunakan script secara bijak dan bertanggung jawab.
 ┃ <b>⋅𖤓⋅ PERFECT STAFF : Rp45.000</b>
 ┃ <b>⋅𖤓⋅ PERFECT ADMIN : Rp55.000</b>
 ┃ <b>⋅𖤓⋅ DEVELOPER : Rp80.000</b>
-┃
 ┃ ─────────────────
 ┃ <b>⋅𖤓⋅ PEMBELIAN & AKSES</b>
 ┃ Hubungi: @ridzzhalutrs / @Jerroffc
@@ -641,7 +640,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 ┏━━〔 <b>ABOUT THE PROJECT</b> 〕
 ┃ 𖤓 <b>Project</b> : PERFECT
 ┃ 𖤓 <b>Category</b> : WhatsApp bug bot 
-┃ 𖤓 <b>Developer</b> : @@Jerroffc ＆ @ridzzhalutrs
+┃ 𖤓 <b>Developer</b> : @Jerroffc ＆ @ridzzhalutrs
 ┗━━━━━━━━━━━━━━━━━━
 
 ✧ <i>Simple. Perfect. Continuously evolving.</i>
