@@ -579,6 +579,7 @@ bot.on("callback_query", async (query) => {
 ┏━━〔 <b>ACCESS MENU</b> 〕
 ┃ 𖤓 /addbot     — Tambah sender
 ┃ 𖤓 /setcd      — Atur cooldown
+┃ 𖤓 /update     — Update script
 ┃ 𖤓 /addprem    — Tambah premium
 ┃ 𖤓 /addadmin   — Tambah admin
 ┃ 𖤓 /deladmin   — Hapus admin
