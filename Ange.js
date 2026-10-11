@@ -560,7 +560,7 @@ bot.on("callback_query", async (query) => {
 ┃ <b>𖤓 /delayhard — 628xx</b>
 ┃ <i>⤷ Perfect Delay</i>
 ┃ <b>𖤓 /force — 628xx</b>
-┃ <i>⤷ Forclose Click/i>
+┃ <i>⤷ Forclose Click</i>
 ┃ <b>𖤓 /xhard — 628xx</b>
 ┃ <i>⤷ Blank Hard</i>
 ┗━━━━━━━━━━━━━━━━━━⪼
