@@ -641,7 +641,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 ┏━━〔 <b>ABOUT THE PROJECT</b> 〕
 ┃ 𖤓 <b>Project</b> : PERFECT
 ┃ 𖤓 <b>Category</b> : WhatsApp bug bot 
-┃ 𖤓 <b>Developer</b> : @Jerroffc ＆ @ridzzhalutrs
+┃ 𖤓 <b>Developer</b> : @Jerroffc ＆ <a href="tg://user?id=6213349853">@ridzz</a>
 ┗━━━━━━━━━━━━━━━━━━
 
 ✧ <i>Simple. Perfect. Continuously evolving.</i>
